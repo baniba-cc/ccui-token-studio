@@ -2,29 +2,29 @@
   "button": {
     "height": {
       "xs": {
-        "$value": "{sizing.button.xs}",
+        "$value": "{sizing.30}",
         "$type": "dimension",
-        "$description": "Extra small button height. Use for inline actions, compact toolbars."
+        "$description": "Extra small button height (30px). Use for inline actions, compact toolbars."
       },
       "sm": {
-        "$value": "{sizing.button.sm}",
+        "$value": "{sizing.36}",
         "$type": "dimension",
-        "$description": "Small button height. Use for secondary actions, compact layouts."
+        "$description": "Small button height (36px). Use for secondary actions, compact layouts."
       },
       "md": {
-        "$value": "{sizing.button.md}",
+        "$value": "{sizing.42}",
         "$type": "dimension",
-        "$description": "Medium button height. DEFAULT for most buttons."
+        "$description": "Medium button height (42px). DEFAULT for most buttons."
       },
       "lg": {
-        "$value": "{sizing.button.lg}",
+        "$value": "{sizing.48}",
         "$type": "dimension",
-        "$description": "Large button height. Use for prominent CTAs."
+        "$description": "Large button height (48px). Use for prominent CTAs, touch-optimized UIs."
       },
       "xl": {
-        "$value": "{sizing.button.xl}",
+        "$value": "{sizing.60}",
         "$type": "dimension",
-        "$description": "Extra large button height. Use for marketing CTAs."
+        "$description": "Extra large button height (60px). Use for marketing CTAs."
       }
     },
     "padding": {

@@ -2,29 +2,29 @@
   "input": {
     "height": {
       "xs": {
-        "$value": "{sizing.input.xs}",
+        "$value": "{sizing.30}",
         "$type": "dimension",
-        "$description": "Extra small input height. Use for compact forms."
+        "$description": "Extra small input height (30px). Use for compact forms, inline editing."
       },
       "sm": {
-        "$value": "{sizing.input.sm}",
+        "$value": "{sizing.36}",
         "$type": "dimension",
-        "$description": "Small input height. Use for secondary inputs."
+        "$description": "Small input height (36px). Use for secondary inputs, compact layouts."
       },
       "md": {
-        "$value": "{sizing.input.md}",
+        "$value": "{sizing.42}",
         "$type": "dimension",
-        "$description": "Medium input height. DEFAULT for most inputs."
+        "$description": "Medium input height (42px). DEFAULT for most inputs."
       },
       "lg": {
-        "$value": "{sizing.input.lg}",
+        "$value": "{sizing.48}",
         "$type": "dimension",
-        "$description": "Large input height. Use for prominent inputs."
+        "$description": "Large input height (48px). Use for prominent inputs, touch-optimized UIs."
       },
       "xl": {
-        "$value": "{sizing.input.xl}",
+        "$value": "{sizing.60}",
         "$type": "dimension",
-        "$description": "Extra large input height. Use for marketing forms."
+        "$description": "Extra large input height (60px). Use for marketing forms, accessibility focus."
       }
     },
     "padding": {

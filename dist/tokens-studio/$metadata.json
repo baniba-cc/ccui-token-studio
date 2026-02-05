@@ -5,6 +5,7 @@
     "semantic/dark",
     "components/button",
     "components/input",
-    "components/modal"
+    "components/modal",
+    "components/icon"
   ]
 }

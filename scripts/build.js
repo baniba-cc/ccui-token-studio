@@ -28,7 +28,8 @@ const SHARED_PRIMITIVE_CATEGORIES = [
     'sizing',
     'button',
     'input',
-    'modal'
+    'modal',
+    'icon'
 ];
 
 // Theme-specific categories - these tokens vary between themes
@@ -425,7 +426,8 @@ const TOKENS_STUDIO_CORE_CATEGORIES = [
 const TOKENS_STUDIO_COMPONENT_SETS = {
     'button': 'components/button',
     'input': 'components/input',
-    'modal': 'components/modal'
+    'modal': 'components/modal',
+    'icon': 'components/icon'
 };
 
 function getOriginalValue(token) {
@@ -479,7 +481,7 @@ function generateTokensStudioMetadata() {
         tokenSetOrder: [
             "core/core",
             "semantic/light", "semantic/dark",
-            "components/button", "components/input", "components/modal"
+            "components/button", "components/input", "components/modal", "components/icon"
         ]
     };
 }
@@ -488,7 +490,8 @@ function generateTokensStudioThemes() {
     const componentSetStatus = {
         "components/button": "enabled",
         "components/input": "enabled",
-        "components/modal": "enabled"
+        "components/modal": "enabled",
+        "components/icon": "enabled"
     };
 
     return [
@@ -614,6 +617,11 @@ async function buildSharedPrimitives() {
                     "transformGroup": transformGroups.json,
                     "buildPath": `${distFolder}/tokens-studio/components/`,
                     "files": [{ "destination": "modal.json", "format": "json/tokens-studio-set", "options": { "setName": "components/modal" } }]
+                },
+                "tokens-studio-components-icon": {
+                    "transformGroup": transformGroups.json,
+                    "buildPath": `${distFolder}/tokens-studio/components/`,
+                    "files": [{ "destination": "icon.json", "format": "json/tokens-studio-set", "options": { "setName": "components/icon" } }]
                 }
             },
             log: { verbosity: 'default' }

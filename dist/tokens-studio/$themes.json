@@ -9,7 +9,8 @@
       "semantic/dark": "disabled",
       "components/button": "enabled",
       "components/input": "enabled",
-      "components/modal": "enabled"
+      "components/modal": "enabled",
+      "components/icon": "enabled"
     }
   },
   {
@@ -22,7 +23,8 @@
       "semantic/dark": "enabled",
       "components/button": "enabled",
       "components/input": "enabled",
-      "components/modal": "enabled"
+      "components/modal": "enabled",
+      "components/icon": "enabled"
     }
   }
 ]
