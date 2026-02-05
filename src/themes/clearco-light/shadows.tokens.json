@@ -1,34 +1,35 @@
 {
+    "$description": "Light theme shadow tokens. References core shadow primitives for consistent elevation across the design system.",
     "shadows": {
         "xs": {
-            "$value": "0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.05), 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.1)",
+            "$value": "{shadow.xs}",
             "$type": "shadow",
-            "$description": "Extra small shadow"
+            "$description": "Extra small shadow - minimal elevation. Use for: subtle depth on cards at rest, input fields."
         },
         "sm": {
-            "$value": "0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0 0.625rem 0.9375rem -0.3125rem, rgba(0, 0, 0, 0.04) 0 0.4375rem 0.4375rem -0.3125rem",
+            "$value": "{shadow.sm}",
             "$type": "shadow",
-            "$description": "Small shadow"
+            "$description": "Small shadow - low elevation. Use for: card hover states, raised buttons."
         },
         "md": {
-            "$value": "0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0 1.25rem 1.5625rem -0.3125rem, rgba(0, 0, 0, 0.04) 0 0.625rem 0.625rem -0.3125rem",
+            "$value": "{shadow.md}",
             "$type": "shadow",
-            "$description": "Medium shadow"
+            "$description": "Medium shadow - moderate elevation. Use for: dropdown menus, popovers, tooltips."
         },
         "lg": {
-            "$value": "0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0 1.75rem 1.4375rem -0.4375rem, rgba(0, 0, 0, 0.04) 0 0.75rem 0.75rem -0.4375rem",
+            "$value": "{shadow.lg}",
             "$type": "shadow",
-            "$description": "Large shadow"
+            "$description": "Large shadow - high elevation. Use for: dialogs, modals, drawers."
         },
         "xl": {
-            "$value": "0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0 2.25rem 1.75rem -0.4375rem, rgba(0, 0, 0, 0.04) 0 1.0625rem 1.0625rem -0.4375rem",
+            "$value": "{shadow.xl}",
             "$type": "shadow",
-            "$description": "Extra large shadow"
+            "$description": "Extra large shadow - maximum elevation. Use for: critical modals, full-screen overlays."
         },
         "footer": {
-            "$value": "0 -0.0625rem 0.1875rem rgba(0, 0, 0, 0.05), 0 -0.625rem 0.9375rem -0.3125rem rgba(0, 0, 0, 0.04), 0 -0.4375rem 0.4375rem -0.3125rem rgba(0, 0, 0, 0.04)",
+            "$value": "{shadow.footer}",
             "$type": "shadow",
-            "$description": "Shadow for fixed footers"
+            "$description": "Footer shadow - upward-casting. Use for: sticky footers, bottom navigation bars."
         }
     }
 }

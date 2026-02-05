@@ -1,0 +1,31 @@
+{
+    "$description": "Dark theme shadow primitives. Higher opacity than light theme for better visibility on dark backgrounds. Shadow structure matches light theme, only opacity values differ.",
+    "shadowDark": {
+        "$type": "shadow",
+        "$description": "Dark theme box-shadow scale. Uses higher opacity values (0.12-0.20) compared to light theme (0.04-0.10) for visibility on dark surfaces.",
+        "xs": {
+            "$value": "0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.15), 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2)",
+            "$description": "Extra small shadow (dark theme) - minimal elevation with higher opacity."
+        },
+        "sm": {
+            "$value": "0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 0 0.625rem 0.9375rem -0.3125rem, rgba(0, 0, 0, 0.12) 0 0.4375rem 0.4375rem -0.3125rem",
+            "$description": "Small shadow (dark theme) - low elevation with higher opacity."
+        },
+        "md": {
+            "$value": "0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 0 1.25rem 1.5625rem -0.3125rem, rgba(0, 0, 0, 0.12) 0 0.625rem 0.625rem -0.3125rem",
+            "$description": "Medium shadow (dark theme) - moderate elevation with higher opacity."
+        },
+        "lg": {
+            "$value": "0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 0 1.75rem 1.4375rem -0.4375rem, rgba(0, 0, 0, 0.12) 0 0.75rem 0.75rem -0.4375rem",
+            "$description": "Large shadow (dark theme) - high elevation with higher opacity."
+        },
+        "xl": {
+            "$value": "0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 0 2.25rem 1.75rem -0.4375rem, rgba(0, 0, 0, 0.12) 0 1.0625rem 1.0625rem -0.4375rem",
+            "$description": "Extra large shadow (dark theme) - maximum elevation with higher opacity."
+        },
+        "footer": {
+            "$value": "0 -0.0625rem 0.1875rem rgba(0, 0, 0, 0.15), 0 -0.625rem 0.9375rem -0.3125rem rgba(0, 0, 0, 0.12), 0 -0.4375rem 0.4375rem -0.3125rem rgba(0, 0, 0, 0.12)",
+            "$description": "Footer shadow (dark theme) - upward-casting with higher opacity."
+        }
+    }
+}
