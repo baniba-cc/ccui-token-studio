@@ -39,6 +39,7 @@ const THEME_SPECIFIC_CATEGORIES = [
     'shadows',
     'opacity',
     'typography',
+    'mantineSpacing',
     'mantine'
 ];
 
@@ -129,6 +130,12 @@ function isMantineOfficialToken(token) {
     }
 
     if (path[0] === 'spacing') {
+        // CCUI spacing tokens use numeric naming (2, 4, 8, etc.), not exported as Mantine tokens
+        return false;
+    }
+
+    if (path[0] === 'mantineSpacing') {
+        // Mantine-compatible spacing with xs, sm, md, lg, xl naming
         return path.length === 2 && MANTINE_SIZES.includes(path[1]);
     }
 
@@ -235,7 +242,8 @@ StyleDictionary.registerTransform({
             return `mantine-color-${path.slice(1).join('-')}`;
         }
 
-        if (path[0] === 'spacing') return `mantine-spacing-${path[1]}`;
+        if (path[0] === 'spacing') return `ccui-spacing-${path[1]}`;
+        if (path[0] === 'mantineSpacing') return `mantine-spacing-${path[1]}`;
         if (path[0] === 'radius') return `mantine-radius-${path[1]}`;
 
         if (path[0] === 'typography') {
@@ -373,7 +381,7 @@ function inferDtcgType(token) {
 
     if (rootCategory === 'color' || rootCategory === 'colorPalette') return 'color';
 
-    if (['spacing', 'gridSpacing', 'verticalRhythm', 'radius', 'sizing',
+    if (['spacing', 'mantineSpacing', 'gridSpacing', 'verticalRhythm', 'radius', 'sizing',
          'borderWidth', 'contentWidth', 'breakpoints'].includes(rootCategory)) {
         return 'dimension';
     }

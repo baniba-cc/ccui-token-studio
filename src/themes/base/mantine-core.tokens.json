@@ -1,5 +1,29 @@
 {
   "$description": "Mantine-specific core settings that are required by Mantine components but don't exist in CCUI's token system. These are added for 1:1 Mantine compatibility.",
+  "mantineSpacing": {
+    "$type": "dimension",
+    "$description": "Mantine-compatible spacing scale mapped to CCUI numeric spacing tokens. These provide xs-xl semantic names for Mantine component props.",
+    "xs": {
+      "$value": "{spacing.8}",
+      "$description": "Mantine extra small spacing (8px). Maps to CCUI spacing-8."
+    },
+    "sm": {
+      "$value": "{spacing.12}",
+      "$description": "Mantine small spacing (12px). Maps to CCUI spacing-12."
+    },
+    "md": {
+      "$value": "{spacing.16}",
+      "$description": "Mantine medium spacing (16px). Maps to CCUI spacing-16. DEFAULT."
+    },
+    "lg": {
+      "$value": "{spacing.20}",
+      "$description": "Mantine large spacing (20px). Maps to CCUI spacing-20."
+    },
+    "xl": {
+      "$value": "{spacing.24}",
+      "$description": "Mantine extra large spacing (24px). Maps to CCUI spacing-24."
+    }
+  },
   "mantine": {
     "$description": "Mantine core configuration variables",
     "scale": {

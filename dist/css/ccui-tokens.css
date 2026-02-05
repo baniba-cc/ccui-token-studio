@@ -1,6 +1,6 @@
 /**
  * CCUI Design Tokens - All-in-One
- * Generated: 2026-02-05T12:08:04.282Z
+ * Generated: 2026-02-05T14:13:24.157Z
  *
  * Includes:
  * - Shared primitives (:root)
@@ -36,10 +36,10 @@
   --ccui-button-height-md: 2.625rem;
   --ccui-button-height-lg: 3rem;
   --ccui-button-height-xl: 3.75rem;
-  --ccui-button-padding-x-xs: 0.625rem;
+  --ccui-button-padding-x-xs: 0.5rem;
   --ccui-button-padding-x-sm: 0.75rem;
   --ccui-button-padding-x-md: 1rem;
-  --ccui-button-padding-x-lg: 1.25rem;
+  --ccui-button-padding-x-lg: 1.5rem;
   --ccui-button-padding-x-xl: 2rem;
   --ccui-button-borderRadius: 0.25rem;
   --ccui-button-fontSize-xs: 0.75rem;
@@ -55,7 +55,7 @@
   --ccui-input-height-md: 2.625rem;
   --ccui-input-height-lg: 3rem;
   --ccui-input-height-xl: 3.75rem;
-  --ccui-input-padding-x-xs: 0.625rem;
+  --ccui-input-padding-x-xs: 0.5rem;
   --ccui-input-padding-x-sm: 0.75rem;
   --ccui-input-padding-x-md: 0.75rem;
   --ccui-input-padding-x-lg: 1rem;
@@ -72,8 +72,8 @@
   --ccui-input-transition-easing: 0,0,0.58,1;
   --ccui-input-focus-ringWidth: 3px;
   --ccui-input-focus-ringOffset: 2px;
-  --ccui-modal-padding-header: 1.25rem;
-  --ccui-modal-padding-body: 1.25rem;
+  --ccui-modal-padding-header: 1.5rem;
+  --ccui-modal-padding-body: 1.5rem;
   --ccui-modal-padding-footer: 1rem;
   --ccui-modal-borderRadius: 1rem;
   --ccui-modal-width-xs: 20rem;
@@ -118,11 +118,20 @@
   --ccui-sizing-icon-md: 1.25rem;
   --ccui-sizing-icon-lg: 1.5rem;
   --ccui-sizing-icon-xl: 2rem;
-  --ccui-spacing-xs: 0.625rem;
-  --ccui-spacing-sm: 0.75rem;
-  --ccui-spacing-md: 1rem;
-  --ccui-spacing-lg: 1.25rem;
-  --ccui-spacing-xl: 2rem;
+  --ccui-spacing-2: 0.125rem;
+  --ccui-spacing-4: 0.25rem;
+  --ccui-spacing-8: 0.5rem;
+  --ccui-spacing-12: 0.75rem;
+  --ccui-spacing-16: 1rem;
+  --ccui-spacing-20: 1.25rem;
+  --ccui-spacing-24: 1.5rem;
+  --ccui-spacing-32: 2rem;
+  --ccui-spacing-40: 2.5rem;
+  --ccui-spacing-48: 3rem;
+  --ccui-spacing-56: 3.5rem;
+  --ccui-spacing-64: 4rem;
+  --ccui-spacing-72: 4.5rem;
+  --ccui-spacing-80: 5rem;
   --ccui-gridSpacing-xs: 8px;
   --ccui-gridSpacing-sm: 16px;
   --ccui-gridSpacing-md: 24px;
@@ -221,11 +230,6 @@
   --mantine-radius-md: 0.5rem;
   --mantine-radius-lg: 1rem;
   --mantine-radius-xl: 2rem;
-  --mantine-spacing-xs: 0.625rem;
-  --mantine-spacing-sm: 0.75rem;
-  --mantine-spacing-md: 1rem;
-  --mantine-spacing-lg: 1.25rem;
-  --mantine-spacing-xl: 2rem;
   --mantine-font-family: 'Public Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --mantine-font-family-monospace: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
   --mantine-font-size-xs: 0.75rem;
@@ -513,6 +517,11 @@
   --ccui-opacity-100: 1;
   --ccui-opacity-disabled: 0.5;
   --ccui-opacity-overlay: 0.6;
+  --ccui-mantineSpacing-xs: 0.5rem;
+  --ccui-mantineSpacing-sm: 0.75rem;
+  --ccui-mantineSpacing-md: 1rem;
+  --ccui-mantineSpacing-lg: 1.25rem;
+  --ccui-mantineSpacing-xl: 1.5rem;
   --ccui-mantine-scale: 1;
   --ccui-mantine-cursorType: pointer;
   --ccui-mantine-webkitFontSmoothing: antialiased;
@@ -844,6 +853,11 @@
   --mantine-line-height-md: 1.5;
   --mantine-line-height-lg: 1.65;
   --mantine-line-height-xl: 1.8;
+  --mantine-spacing-xs: 0.5rem;
+  --mantine-spacing-sm: 0.75rem;
+  --mantine-spacing-md: 1rem;
+  --mantine-spacing-lg: 1.25rem;
+  --mantine-spacing-xl: 1.5rem;
   --mantine-scale: 1;
   --mantine-cursor-type: pointer;
   --mantine-webkit-font-smoothing: antialiased;
@@ -1229,6 +1243,11 @@
   --ccui-opacity-100: 1;
   --ccui-opacity-disabled: 0.5;
   --ccui-opacity-overlay: 0.6;
+  --ccui-mantineSpacing-xs: 0.5rem;
+  --ccui-mantineSpacing-sm: 0.75rem;
+  --ccui-mantineSpacing-md: 1rem;
+  --ccui-mantineSpacing-lg: 1.25rem;
+  --ccui-mantineSpacing-xl: 1.5rem;
   --ccui-mantine-scale: 1;
   --ccui-mantine-cursorType: pointer;
   --ccui-mantine-webkitFontSmoothing: antialiased;
@@ -1559,6 +1578,11 @@
   --mantine-line-height-md: 1.5;
   --mantine-line-height-lg: 1.65;
   --mantine-line-height-xl: 1.8;
+  --mantine-spacing-xs: 0.5rem;
+  --mantine-spacing-sm: 0.75rem;
+  --mantine-spacing-md: 1rem;
+  --mantine-spacing-lg: 1.25rem;
+  --mantine-spacing-xl: 1.5rem;
   --mantine-scale: 1;
   --mantine-cursor-type: pointer;
   --mantine-webkit-font-smoothing: antialiased;

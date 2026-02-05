@@ -4,15 +4,15 @@
         "padding": {
             "$type": "dimension",
             "header": {
-                "$value": "{spacing.lg}",
+                "$value": "{spacing.24}",
                 "$description": "Modal header padding (24px). Use for title and close button area."
             },
             "body": {
-                "$value": "{spacing.lg}",
+                "$value": "{spacing.24}",
                 "$description": "Modal body content padding (24px). Use for main dialog content."
             },
             "footer": {
-                "$value": "{spacing.md}",
+                "$value": "{spacing.16}",
                 "$description": "Modal footer padding (16px). Use for action button container."
             }
         },

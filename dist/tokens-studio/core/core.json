@@ -943,30 +943,75 @@
     }
   },
   "spacing": {
-    "xs": {
-      "$value": "0.625rem",
+    "2": {
+      "$value": "0.125rem",
       "$type": "dimension",
-      "$description": "Extra small spacing (10px). Use for: tight padding in compact components, icon-to-text gaps, inline element spacing, dense data tables. Common in: badges, tags, compact buttons, chip components."
+      "$description": "Micro spacing (2px). Use for: hairline gaps, subtle visual separations, icon optical adjustments, fine-tuning alignment. Common in: stacked icons, tight inline elements, border spacing, minimal breathing room between dense elements."
     },
-    "sm": {
+    "4": {
+      "$value": "0.25rem",
+      "$type": "dimension",
+      "$description": "Very small spacing (4px). Use for: compact component internal gaps, tight list items, dense table cell padding, icon-to-text micro gaps. Common in: tags, badges, compact chips, dense data displays, inline code blocks."
+    },
+    "8": {
+      "$value": "0.5rem",
+      "$type": "dimension",
+      "$description": "Small spacing (8px). Use for: tight padding in compact components, icon-to-text gaps, small button padding, dense form layouts. Common in: small buttons, compact inputs, toolbar items, pill badges, tight card grids."
+    },
+    "12": {
       "$value": "0.75rem",
       "$type": "dimension",
-      "$description": "Small spacing (12px). Use for: standard component internal padding, form field padding, list item padding, card content padding. Common in: buttons, inputs, dropdowns, list items."
+      "$description": "Standard small spacing (12px). Use for: standard component internal padding, form field padding, list item padding, comfortable compact UIs. Common in: buttons, inputs, dropdowns, list items, alert padding, menu items."
     },
-    "md": {
+    "16": {
       "$value": "1rem",
       "$type": "dimension",
-      "$description": "Medium spacing (16px). DEFAULT spacing value. Use for: standard gaps between elements, modal padding, card padding, section padding within components. Most common spacing value in the system."
+      "$description": "Base spacing (16px). DEFAULT spacing value. Use for: standard gaps between elements, default component padding, card content padding, form group spacing. Most common spacing value in the system - the baseline reference."
     },
-    "lg": {
+    "20": {
       "$value": "1.25rem",
       "$type": "dimension",
-      "$description": "Large spacing (20px). Use for: generous padding, separation between related groups, dialog/modal padding, card spacing. Creates breathing room without excessive whitespace."
+      "$description": "Medium spacing (20px). Use for: generous component padding, separation between related groups, comfortable breathing room. Common in: card padding, dialog content padding, section sub-dividers, relaxed form layouts."
     },
-    "xl": {
+    "24": {
+      "$value": "1.5rem",
+      "$type": "dimension",
+      "$description": "Large spacing (24px). Use for: modal/dialog padding, card spacing, comfortable content separation, generous component margins. Common in: modal containers, feature cards, dashboard panels, content sections."
+    },
+    "32": {
       "$value": "2rem",
       "$type": "dimension",
-      "$description": "Extra large spacing (32px). Use for: major section separation, page-level margins, large component padding, hero sections. Creates significant visual separation between unrelated content areas."
+      "$description": "Extra large spacing (32px). Use for: major content block separation, large card padding, section dividers within pages. Common in: page sections, hero content padding, feature showcases, spacious card layouts."
+    },
+    "40": {
+      "$value": "2.5rem",
+      "$type": "dimension",
+      "$description": "Section spacing (40px). Use for: significant section separation, generous layout margins, prominent content blocks. Common in: landing page sections, dashboard section gaps, major content dividers."
+    },
+    "48": {
+      "$value": "3rem",
+      "$type": "dimension",
+      "$description": "Large section spacing (48px). Use for: large section breaks, page-level content separation, hero component internal spacing. Common in: page headers, major layout divisions, feature section padding."
+    },
+    "56": {
+      "$value": "3.5rem",
+      "$type": "dimension",
+      "$description": "Page section spacing (56px). Use for: substantial page section margins, generous hero padding, prominent content area separation. Common in: landing page hero sections, major page divisions, marketing layouts."
+    },
+    "64": {
+      "$value": "4rem",
+      "$type": "dimension",
+      "$description": "Major section spacing (64px). Use for: major page section breaks, hero section padding, significant layout whitespace. Common in: page-level section gaps, hero components, full-width content dividers."
+    },
+    "72": {
+      "$value": "4.5rem",
+      "$type": "dimension",
+      "$description": "Expansive spacing (72px). Use for: very large section separation, expansive layout margins, premium whitespace. Common in: marketing pages, landing hero sections, high-emphasis content areas."
+    },
+    "80": {
+      "$value": "5rem",
+      "$type": "dimension",
+      "$description": "Maximum spacing (80px). Largest spacing value. Use for: maximum section breaks, largest page margins, expansive hero sections. Common in: landing page hero areas, major page divisions, spacious marketing layouts. Use sparingly - represents maximum breathing room."
     }
   },
   "gridSpacing": {
