@@ -1,6 +1,6 @@
 /**
  * CCUI Design Tokens - All-in-One
- * Generated: 2026-02-05T15:23:36.461Z
+ * Generated: 2026-02-05T15:58:54.817Z
  *
  * Includes:
  * - Shared primitives (:root)
@@ -50,11 +50,6 @@
   --ccui-button-fontWeight: 600;
   --ccui-button-transition-duration: 100ms;
   --ccui-button-transition-easing: 0,0,0.58,1;
-  --ccui-icon-size-xs: 0.75rem;
-  --ccui-icon-size-sm: 1rem;
-  --ccui-icon-size-md: 1.25rem;
-  --ccui-icon-size-lg: 1.5rem;
-  --ccui-icon-size-xl: 2rem;
   --ccui-input-height-xs: 1.875rem;
   --ccui-input-height-sm: 2.25rem;
   --ccui-input-height-md: 2.625rem;
@@ -108,16 +103,21 @@
   --ccui-radius-lg: 1rem;
   --ccui-radius-xl: 2rem;
   --ccui-radius-full: 9999px;
-  --ccui-sizing-12: 0.75rem;
-  --ccui-sizing-16: 1rem;
-  --ccui-sizing-20: 1.25rem;
-  --ccui-sizing-24: 1.5rem;
-  --ccui-sizing-30: 1.875rem;
-  --ccui-sizing-32: 2rem;
-  --ccui-sizing-36: 2.25rem;
-  --ccui-sizing-42: 2.625rem;
-  --ccui-sizing-48: 3rem;
-  --ccui-sizing-60: 3.75rem;
+  --ccui-sizing-input-xs: 1.875rem;
+  --ccui-sizing-input-sm: 2.25rem;
+  --ccui-sizing-input-md: 2.625rem;
+  --ccui-sizing-input-lg: 3rem;
+  --ccui-sizing-input-xl: 3.75rem;
+  --ccui-sizing-button-xs: 1.875rem;
+  --ccui-sizing-button-sm: 2.25rem;
+  --ccui-sizing-button-md: 2.625rem;
+  --ccui-sizing-button-lg: 3rem;
+  --ccui-sizing-button-xl: 3.75rem;
+  --ccui-sizing-icon-xs: 0.75rem;
+  --ccui-sizing-icon-sm: 1rem;
+  --ccui-sizing-icon-md: 1.25rem;
+  --ccui-sizing-icon-lg: 1.5rem;
+  --ccui-sizing-icon-xl: 2rem;
   --ccui-spacing-2: 0.125rem;
   --ccui-spacing-4: 0.25rem;
   --ccui-spacing-8: 0.5rem;

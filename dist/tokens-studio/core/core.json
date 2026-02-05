@@ -860,55 +860,86 @@
     }
   },
   "sizing": {
-    "12": {
-      "$value": "0.75rem",
-      "$type": "dimension",
-      "$description": "12px size. Use for: small icons, compact indicators, inline elements."
+    "input": {
+      "xs": {
+        "$value": "1.875rem",
+        "$type": "dimension",
+        "$description": "Extra small input height (30px). Use for: compact forms, inline editing, space-constrained UIs."
+      },
+      "sm": {
+        "$value": "2.25rem",
+        "$type": "dimension",
+        "$description": "Small input height (36px). Use for: secondary inputs, compact layouts, mobile-optimized forms."
+      },
+      "md": {
+        "$value": "2.625rem",
+        "$type": "dimension",
+        "$description": "Medium input height (42px). DEFAULT size for most inputs. Use for: standard forms, primary data entry."
+      },
+      "lg": {
+        "$value": "3rem",
+        "$type": "dimension",
+        "$description": "Large input height (48px). Use for: prominent inputs, touch-optimized UIs, hero forms."
+      },
+      "xl": {
+        "$value": "3.75rem",
+        "$type": "dimension",
+        "$description": "Extra large input height (60px). Use for: marketing forms, high-emphasis inputs, accessibility focus."
+      }
     },
-    "16": {
-      "$value": "1rem",
-      "$type": "dimension",
-      "$description": "16px size. Use for: standard icons, small UI elements."
+    "button": {
+      "xs": {
+        "$value": "1.875rem",
+        "$type": "dimension",
+        "$description": "Extra small button height (30px). Use for: inline actions, compact toolbars, icon-only buttons."
+      },
+      "sm": {
+        "$value": "2.25rem",
+        "$type": "dimension",
+        "$description": "Small button height (36px). Use for: secondary actions, compact layouts, less prominent CTAs."
+      },
+      "md": {
+        "$value": "2.625rem",
+        "$type": "dimension",
+        "$description": "Medium button height (42px). DEFAULT size for most buttons. Use for: primary actions, form submits."
+      },
+      "lg": {
+        "$value": "3rem",
+        "$type": "dimension",
+        "$description": "Large button height (48px). Use for: prominent CTAs, hero sections, touch-optimized UIs."
+      },
+      "xl": {
+        "$value": "3.75rem",
+        "$type": "dimension",
+        "$description": "Extra large button height (60px). Use for: marketing CTAs, high-emphasis actions."
+      }
     },
-    "20": {
-      "$value": "1.25rem",
-      "$type": "dimension",
-      "$description": "20px size. Use for: medium icons, default icon size."
-    },
-    "24": {
-      "$value": "1.5rem",
-      "$type": "dimension",
-      "$description": "24px size. Use for: large icons, action icons."
-    },
-    "30": {
-      "$value": "1.875rem",
-      "$type": "dimension",
-      "$description": "30px size. Use for: extra small component heights (xs buttons/inputs)."
-    },
-    "32": {
-      "$value": "2rem",
-      "$type": "dimension",
-      "$description": "32px size. Use for: extra large icons, feature icons."
-    },
-    "36": {
-      "$value": "2.25rem",
-      "$type": "dimension",
-      "$description": "36px size. Use for: small component heights (sm buttons/inputs)."
-    },
-    "42": {
-      "$value": "2.625rem",
-      "$type": "dimension",
-      "$description": "42px size. Use for: medium component heights (md buttons/inputs). DEFAULT for most interactive elements."
-    },
-    "48": {
-      "$value": "3rem",
-      "$type": "dimension",
-      "$description": "48px size. Use for: large component heights (lg buttons/inputs), touch-optimized targets."
-    },
-    "60": {
-      "$value": "3.75rem",
-      "$type": "dimension",
-      "$description": "60px size. Use for: extra large component heights (xl buttons/inputs), marketing elements."
+    "icon": {
+      "xs": {
+        "$value": "0.75rem",
+        "$type": "dimension",
+        "$description": "Extra small icon size (12px). Use for: inline indicators, badge icons, compact UIs."
+      },
+      "sm": {
+        "$value": "1rem",
+        "$type": "dimension",
+        "$description": "Small icon size (16px). Use for: inline icons, button icons with text, input icons."
+      },
+      "md": {
+        "$value": "1.25rem",
+        "$type": "dimension",
+        "$description": "Medium icon size (20px). DEFAULT for most icons. Use for: standalone icons, navigation icons."
+      },
+      "lg": {
+        "$value": "1.5rem",
+        "$type": "dimension",
+        "$description": "Large icon size (24px). Use for: prominent icons, action icons, toolbar icons."
+      },
+      "xl": {
+        "$value": "2rem",
+        "$type": "dimension",
+        "$description": "Extra large icon size (32px). Use for: feature icons, empty state illustrations, marketing icons."
+      }
     }
   },
   "spacing": {

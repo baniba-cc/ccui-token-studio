@@ -2,27 +2,26 @@
     "$description": "Button component tokens. These tokens compose primitive tokens into button-specific configurations for consistent button styling across the design system.",
     "button": {
         "height": {
-            "$type": "dimension",
             "$description": "Button height values mapped from sizing primitives.",
             "xs": {
-                "$value": "{sizing.30}",
-                "$description": "Extra small button height (30px). Use for inline actions, compact toolbars."
+                "$value": "{sizing.button.xs}",
+                "$description": "Extra small button height. Use for inline actions, compact toolbars."
             },
             "sm": {
-                "$value": "{sizing.36}",
-                "$description": "Small button height (36px). Use for secondary actions, compact layouts."
+                "$value": "{sizing.button.sm}",
+                "$description": "Small button height. Use for secondary actions, compact layouts."
             },
             "md": {
-                "$value": "{sizing.42}",
-                "$description": "Medium button height (42px). DEFAULT for most buttons."
+                "$value": "{sizing.button.md}",
+                "$description": "Medium button height. DEFAULT for most buttons."
             },
             "lg": {
-                "$value": "{sizing.48}",
-                "$description": "Large button height (48px). Use for prominent CTAs, touch-optimized UIs."
+                "$value": "{sizing.button.lg}",
+                "$description": "Large button height. Use for prominent CTAs."
             },
             "xl": {
-                "$value": "{sizing.60}",
-                "$description": "Extra large button height (60px). Use for marketing CTAs."
+                "$value": "{sizing.button.xl}",
+                "$description": "Extra large button height. Use for marketing CTAs."
             }
         },
         "padding": {
