@@ -10,18 +10,39 @@ npm install ccui-tokens
 
 The `dist/` folder is automatically generated on install via postinstall hook.
 
-## Output Formats
+## Usage
 
 ### CSS Variables
 
-```css
-/* Import shared primitives (once, at root) */
-@import 'ccui-tokens/css/shared/ccui-primitives.css';
-@import 'ccui-tokens/css/shared/mantine-primitives.css';
+Import the single CSS file containing all tokens and themes:
 
-/* Import theme-specific tokens */
-@import 'ccui-tokens/css/clearco-light/ccui-semantic.css';
-@import 'ccui-tokens/css/clearco-light/mantine-theme.css';
+```tsx
+import 'ccui-tokens/css';
+```
+
+This includes:
+- Shared primitives (`:root`)
+- Light theme as default (`:root` + `[data-mantine-color-scheme="light"]`)
+- Dark theme (`[data-mantine-color-scheme="dark"]`)
+
+Theme switching works automatically with Mantine:
+
+```tsx
+import { MantineProvider, useMantineColorScheme } from '@mantine/core';
+import 'ccui-tokens/css';
+
+function App() {
+  return (
+    <MantineProvider defaultColorScheme="light">
+      <YourApp />
+    </MantineProvider>
+  );
+}
+
+function ThemeToggle() {
+  const { toggleColorScheme } = useMantineColorScheme();
+  return <button onClick={toggleColorScheme}>Toggle Theme</button>;
+}
 ```
 
 ### Tokens Studio
@@ -46,12 +67,7 @@ ccui-tokens/
 │   └── themes/         # Semantic tokens
 ├── dist/               # Generated (not committed)
 │   ├── css/
-│   │   ├── shared/
-│   │   │   ├── ccui-primitives.css
-│   │   │   └── mantine-primitives.css
-│   │   └── {theme}/
-│   │       ├── ccui-semantic.css
-│   │       └── mantine-theme.css
+│   │   └── ccui-tokens.css
 │   └── tokens-studio/
 │       ├── $metadata.json
 │       ├── $themes.json
@@ -68,6 +84,7 @@ ccui-tokens/
 npm run build    # Build all tokens
 npm run clean    # Remove dist/
 npm run watch    # Rebuild on changes
+npm test         # Run tests
 ```
 
 ## License
