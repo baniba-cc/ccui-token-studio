@@ -888,32 +888,32 @@
   "shadows": {
     "xs": {
       "$value": "{shadow.xs}",
-      "$type": "shadow",
+      "$type": "boxShadow",
       "$description": "Extra small shadow - minimal elevation. Use for: subtle depth on cards at rest, input fields."
     },
     "sm": {
       "$value": "{shadow.sm}",
-      "$type": "shadow",
+      "$type": "boxShadow",
       "$description": "Small shadow - low elevation. Use for: card hover states, raised buttons."
     },
     "md": {
       "$value": "{shadow.md}",
-      "$type": "shadow",
+      "$type": "boxShadow",
       "$description": "Medium shadow - moderate elevation. Use for: dropdown menus, popovers, tooltips."
     },
     "lg": {
       "$value": "{shadow.lg}",
-      "$type": "shadow",
+      "$type": "boxShadow",
       "$description": "Large shadow - high elevation. Use for: dialogs, modals, drawers."
     },
     "xl": {
       "$value": "{shadow.xl}",
-      "$type": "shadow",
+      "$type": "boxShadow",
       "$description": "Extra large shadow - maximum elevation. Use for: critical modals, full-screen overlays."
     },
     "footer": {
       "$value": "{shadow.footer}",
-      "$type": "shadow",
+      "$type": "boxShadow",
       "$description": "Footer shadow - upward-casting. Use for: sticky footers, bottom navigation bars."
     }
   }

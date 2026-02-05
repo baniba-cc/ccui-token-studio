@@ -888,32 +888,32 @@
   "shadows": {
     "xs": {
       "$value": "{shadowDark.xs}",
-      "$type": "shadow",
+      "$type": "boxShadow",
       "$description": "Extra small shadow (dark theme) - minimal elevation. Use for: subtle depth on cards at rest, input fields."
     },
     "sm": {
       "$value": "{shadowDark.sm}",
-      "$type": "shadow",
+      "$type": "boxShadow",
       "$description": "Small shadow (dark theme) - low elevation. Use for: card hover states, raised buttons."
     },
     "md": {
       "$value": "{shadowDark.md}",
-      "$type": "shadow",
+      "$type": "boxShadow",
       "$description": "Medium shadow (dark theme) - moderate elevation. Use for: dropdown menus, popovers, tooltips."
     },
     "lg": {
       "$value": "{shadowDark.lg}",
-      "$type": "shadow",
+      "$type": "boxShadow",
       "$description": "Large shadow (dark theme) - high elevation. Use for: dialogs, modals, drawers."
     },
     "xl": {
       "$value": "{shadowDark.xl}",
-      "$type": "shadow",
+      "$type": "boxShadow",
       "$description": "Extra large shadow (dark theme) - maximum elevation. Use for: critical modals, full-screen overlays."
     },
     "footer": {
       "$value": "{shadowDark.footer}",
-      "$type": "shadow",
+      "$type": "boxShadow",
       "$description": "Footer shadow (dark theme) - upward-casting. Use for: sticky footers, bottom navigation bars."
     }
   }

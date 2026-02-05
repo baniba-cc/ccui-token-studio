@@ -398,7 +398,8 @@ const DTCG_TYPE_MAP = {
     'strokeStyle': 'strokeStyle',
     'border': 'border',
     'transition': 'transition',
-    'shadow': 'shadow',
+    'shadow': 'boxShadow',
+    'boxShadow': 'boxShadow',
     'gradient': 'gradient',
     'typography': 'typography'
 };
@@ -432,7 +433,7 @@ function inferDtcgType(token) {
         if (path.includes('easing')) return 'cubicBezier';
     }
 
-    if (rootCategory === 'shadow' || rootCategory === 'shadows') return 'shadow';
+    if (rootCategory === 'shadow' || rootCategory === 'shadows') return 'boxShadow';
     if (rootCategory === 'zIndex' || rootCategory === 'opacity') return 'number';
     if (rootCategory === 'borderStyle') return 'strokeStyle';
 
