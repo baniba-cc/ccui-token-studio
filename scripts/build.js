@@ -407,25 +407,12 @@ function inferDtcgType(token) {
     return null;
 }
 
-const TOKENS_STUDIO_CORE_SETS = {
-    'color': 'core/color',
-    'spacing': 'core/spacing',
-    'gridSpacing': 'core/spacing',
-    'verticalRhythm': 'core/spacing',
-    'radius': 'core/radius',
-    'typography': 'core/typography',
-    'shadow': 'core/shadow',
-    'shadows': 'core/shadow',
-    'motion': 'core/motion',
-    'borderWidth': 'core/border',
-    'borderStyle': 'core/border',
-    'breakpoints': 'core/breakpoints',
-    'contentWidth': 'core/breakpoints',
-    'zIndex': 'core/z-index',
-    'opacity': 'core/opacity',
-    'sizing': 'core/sizing',
-    'focus': 'core/focus'
-};
+// All core token categories
+const TOKENS_STUDIO_CORE_CATEGORIES = [
+    'color', 'spacing', 'gridSpacing', 'verticalRhythm', 'radius', 'typography',
+    'shadow', 'shadows', 'motion', 'borderWidth', 'borderStyle', 'breakpoints',
+    'contentWidth', 'zIndex', 'opacity', 'sizing', 'focus'
+];
 
 const TOKENS_STUDIO_COMPONENT_SETS = {
     'button': 'components/button',
@@ -474,7 +461,7 @@ function filterTokensBySet(tokens, setName) {
     return tokens.filter(token => {
         const category = token.path[0];
         if (TOKENS_STUDIO_COMPONENT_SETS[category] === setName) return true;
-        if (TOKENS_STUDIO_CORE_SETS[category] === setName) return true;
+        if (setName === 'core' && TOKENS_STUDIO_CORE_CATEGORIES.includes(category)) return true;
         return false;
     });
 }
@@ -482,9 +469,7 @@ function filterTokensBySet(tokens, setName) {
 function generateTokensStudioMetadata() {
     return {
         tokenSetOrder: [
-            "core/color", "core/spacing", "core/radius", "core/typography",
-            "core/shadow", "core/motion", "core/border", "core/breakpoints",
-            "core/z-index", "core/opacity", "core/sizing", "core/focus",
+            "core/core",
             "semantic/light", "semantic/dark",
             "components/button", "components/input", "components/modal"
         ]
@@ -492,13 +477,6 @@ function generateTokensStudioMetadata() {
 }
 
 function generateTokensStudioThemes() {
-    const coreSetStatus = {
-        "core/color": "source", "core/spacing": "source", "core/radius": "source",
-        "core/typography": "source", "core/shadow": "source", "core/motion": "source",
-        "core/border": "source", "core/breakpoints": "source", "core/z-index": "source",
-        "core/opacity": "source", "core/sizing": "source", "core/focus": "source"
-    };
-
     const componentSetStatus = {
         "components/button": "enabled",
         "components/input": "enabled",
@@ -508,11 +486,11 @@ function generateTokensStudioThemes() {
     return [
         {
             id: "clearco-light", name: "Light", group: "mode",
-            selectedTokenSets: { ...coreSetStatus, "semantic/light": "enabled", "semantic/dark": "disabled", ...componentSetStatus }
+            selectedTokenSets: { "core/core": "source", "semantic/light": "enabled", "semantic/dark": "disabled", ...componentSetStatus }
         },
         {
             id: "clearco-dark", name: "Dark", group: "mode",
-            selectedTokenSets: { ...coreSetStatus, "semantic/light": "disabled", "semantic/dark": "enabled", ...componentSetStatus }
+            selectedTokenSets: { "core/core": "source", "semantic/light": "disabled", "semantic/dark": "enabled", ...componentSetStatus }
         }
     ];
 }
@@ -608,66 +586,11 @@ async function buildSharedPrimitives() {
                         "options": { "selector": ":root" }
                     }]
                 },
-                // Tokens Studio core sets
-                "tokens-studio-core-color": {
+                // Tokens Studio core set (single combined file)
+                "tokens-studio-core": {
                     "transformGroup": transformGroups.json,
                     "buildPath": `${distFolder}/tokens-studio/core/`,
-                    "files": [{ "destination": "color.json", "format": "json/tokens-studio-set", "options": { "setName": "core/color" } }]
-                },
-                "tokens-studio-core-spacing": {
-                    "transformGroup": transformGroups.json,
-                    "buildPath": `${distFolder}/tokens-studio/core/`,
-                    "files": [{ "destination": "spacing.json", "format": "json/tokens-studio-set", "options": { "setName": "core/spacing" } }]
-                },
-                "tokens-studio-core-radius": {
-                    "transformGroup": transformGroups.json,
-                    "buildPath": `${distFolder}/tokens-studio/core/`,
-                    "files": [{ "destination": "radius.json", "format": "json/tokens-studio-set", "options": { "setName": "core/radius" } }]
-                },
-                "tokens-studio-core-typography": {
-                    "transformGroup": transformGroups.json,
-                    "buildPath": `${distFolder}/tokens-studio/core/`,
-                    "files": [{ "destination": "typography.json", "format": "json/tokens-studio-set", "options": { "setName": "core/typography" } }]
-                },
-                "tokens-studio-core-shadow": {
-                    "transformGroup": transformGroups.json,
-                    "buildPath": `${distFolder}/tokens-studio/core/`,
-                    "files": [{ "destination": "shadow.json", "format": "json/tokens-studio-set", "options": { "setName": "core/shadow" } }]
-                },
-                "tokens-studio-core-motion": {
-                    "transformGroup": transformGroups.json,
-                    "buildPath": `${distFolder}/tokens-studio/core/`,
-                    "files": [{ "destination": "motion.json", "format": "json/tokens-studio-set", "options": { "setName": "core/motion" } }]
-                },
-                "tokens-studio-core-border": {
-                    "transformGroup": transformGroups.json,
-                    "buildPath": `${distFolder}/tokens-studio/core/`,
-                    "files": [{ "destination": "border.json", "format": "json/tokens-studio-set", "options": { "setName": "core/border" } }]
-                },
-                "tokens-studio-core-breakpoints": {
-                    "transformGroup": transformGroups.json,
-                    "buildPath": `${distFolder}/tokens-studio/core/`,
-                    "files": [{ "destination": "breakpoints.json", "format": "json/tokens-studio-set", "options": { "setName": "core/breakpoints" } }]
-                },
-                "tokens-studio-core-z-index": {
-                    "transformGroup": transformGroups.json,
-                    "buildPath": `${distFolder}/tokens-studio/core/`,
-                    "files": [{ "destination": "z-index.json", "format": "json/tokens-studio-set", "options": { "setName": "core/z-index" } }]
-                },
-                "tokens-studio-core-opacity": {
-                    "transformGroup": transformGroups.json,
-                    "buildPath": `${distFolder}/tokens-studio/core/`,
-                    "files": [{ "destination": "opacity.json", "format": "json/tokens-studio-set", "options": { "setName": "core/opacity" } }]
-                },
-                "tokens-studio-core-sizing": {
-                    "transformGroup": transformGroups.json,
-                    "buildPath": `${distFolder}/tokens-studio/core/`,
-                    "files": [{ "destination": "sizing.json", "format": "json/tokens-studio-set", "options": { "setName": "core/sizing" } }]
-                },
-                "tokens-studio-core-focus": {
-                    "transformGroup": transformGroups.json,
-                    "buildPath": `${distFolder}/tokens-studio/core/`,
-                    "files": [{ "destination": "focus.json", "format": "json/tokens-studio-set", "options": { "setName": "core/focus" } }]
+                    "files": [{ "destination": "core.json", "format": "json/tokens-studio-set", "options": { "setName": "core" } }]
                 },
                 "tokens-studio-components-button": {
                     "transformGroup": transformGroups.json,

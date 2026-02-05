@@ -1,0 +1,1563 @@
+{
+  "borderWidth": {
+    "none": {
+      "$value": "0",
+      "$type": "dimension",
+      "$description": "No border (0px). Use for: removing inherited borders, borderless variants, flat designs. CSS: border-width: 0; Common in: ghost buttons, flat cards, seamless containers."
+    },
+    "thin": {
+      "$value": "1px",
+      "$type": "dimension",
+      "$description": "Thin border (1px). DEFAULT for most UI borders. Use for: input fields, cards, tables, subtle containment, dividers. Provides structure without visual weight. Common in: Input, Select, Card, Table, dividers, most bordered elements."
+    },
+    "medium": {
+      "$value": "2px",
+      "$type": "dimension",
+      "$description": "Medium border (2px). Use for: emphasis, active/selected states, focus indicators, section dividers. More prominent than thin - draws attention. Common in: active tab indicators, selected items, heavy dividers, emphasized cards."
+    },
+    "thick": {
+      "$value": "4px",
+      "$type": "dimension",
+      "$description": "Thick border (4px). Use for: strong emphasis, decorative elements, major section dividers, brand accents. Very prominent - use sparingly. Common in: hero sections, brand elements, major visual accents, side indicators."
+    }
+  },
+  "borderStyle": {
+    "solid": {
+      "$value": "solid",
+      "$type": "strokeStyle",
+      "$description": "Solid border style. DEFAULT for all standard borders. Use for: inputs, cards, buttons, tables, containers. Continuous line - clean and professional. CSS keyword."
+    },
+    "dashed": {
+      "$value": "dashed",
+      "$type": "strokeStyle",
+      "$description": "Dashed border style. Use for: drop zones, placeholder elements, 'add new' areas, temporary states, grouping without containment. Suggests incompleteness or potential. Common in: drag-and-drop zones, placeholder cards, dashed separators."
+    },
+    "dotted": {
+      "$value": "dotted",
+      "$type": "strokeStyle",
+      "$description": "Dotted border style. Use for: decorative elements, subtle separators, accessibility focus alternatives, lightweight boundaries. Softer than dashed. Common in: decorative dividers, coupon borders, alternative focus styles."
+    },
+    "none": {
+      "$value": "none",
+      "$type": "strokeStyle",
+      "$description": "No border style. Use for: removing inherited borders, clean/minimal designs, when using other separation methods. CSS keyword. Equivalent to border-style: none;."
+    }
+  },
+  "color": {
+    "white": {
+      "$value": "#ffffff",
+      "$type": "color",
+      "$description": "Pure white. Use for: light theme backgrounds, text on dark backgrounds, card surfaces. Contrast ratio with black: 21:1 (WCAG AAA). Avoid using directly - prefer semantic tokens like color.body or color.default."
+    },
+    "black": {
+      "$value": "#000000",
+      "$type": "color",
+      "$description": "Pure black. Use for: dark theme text emphasis, high-contrast borders. Contrast ratio with white: 21:1 (WCAG AAA). Rarely used directly - prefer dark.9 for softer blacks or semantic color.text token."
+    },
+    "transparent": {
+      "$value": "transparent",
+      "$type": "color",
+      "$description": "Fully transparent. Use for: invisible interactive areas, overlay starting states, clearfix backgrounds. CSS keyword value - works in all color contexts."
+    },
+    "dark": {
+      "0": {
+        "$value": "#d5d7d9",
+        "$type": "color",
+        "$description": "Lightest dark - text color on dark backgrounds, disabled states on dark theme"
+      },
+      "1": {
+        "$value": "#b4b7bb",
+        "$type": "color",
+        "$description": "Light dark - secondary text on dark theme, subtle borders"
+      },
+      "2": {
+        "$value": "#93979c",
+        "$type": "color",
+        "$description": "Mid-light dark - placeholder text on dark theme, icons"
+      },
+      "3": {
+        "$value": "#74787e",
+        "$type": "color",
+        "$description": "Medium dark - dimmed text, decorative elements"
+      },
+      "4": {
+        "$value": "#565b61",
+        "$type": "color",
+        "$description": "Mid dark - borders on dark theme, dividers"
+      },
+      "5": {
+        "$value": "#3a3f46",
+        "$type": "color",
+        "$description": "Base dark - elevated surfaces on dark theme, cards"
+      },
+      "6": {
+        "$value": "#21262d",
+        "$type": "color",
+        "$description": "Dark base - primary dark theme background, app shells"
+      },
+      "7": {
+        "$value": "#181c22",
+        "$type": "color",
+        "$description": "Darker - alternative dark background, sidebar backgrounds"
+      },
+      "8": {
+        "$value": "#13161b",
+        "$type": "color",
+        "$description": "Very dark - modal overlays on dark theme, deep shadows"
+      },
+      "9": {
+        "$value": "#0e1014",
+        "$type": "color",
+        "$description": "Darkest - near-black for maximum contrast elements"
+      }
+    },
+    "gray": {
+      "0": {
+        "$value": "#f3f4f5",
+        "$type": "color",
+        "$description": "Lightest gray - subtle backgrounds, hover states on white, zebra striping"
+      },
+      "1": {
+        "$value": "#e4e6e8",
+        "$type": "color",
+        "$description": "Light gray - input backgrounds, disabled backgrounds, table headers"
+      },
+      "2": {
+        "$value": "#c8cbce",
+        "$type": "color",
+        "$description": "Mid-light gray - borders, dividers, inactive tabs"
+      },
+      "3": {
+        "$value": "#adb1b5",
+        "$type": "color",
+        "$description": "Medium gray - placeholder text (use carefully - check contrast), icons"
+      },
+      "4": {
+        "$value": "#92979d",
+        "$type": "color",
+        "$description": "Mid gray - secondary icons, chart gridlines"
+      },
+      "5": {
+        "$value": "#787e85",
+        "$type": "color",
+        "$description": "Base gray - dimmed text, help text (4.5:1 on white = AA)"
+      },
+      "6": {
+        "$value": "#5f656d",
+        "$type": "color",
+        "$description": "Dark gray - secondary text (7:1 on white = AAA), labels"
+      },
+      "7": {
+        "$value": "#474d55",
+        "$type": "color",
+        "$description": "Darker gray - primary text alternative, emphasis"
+      },
+      "8": {
+        "$value": "#31363d",
+        "$type": "color",
+        "$description": "Very dark gray - high-emphasis text on light backgrounds"
+      },
+      "9": {
+        "$value": "#1c2026",
+        "$type": "color",
+        "$description": "Darkest gray - headings, maximum emphasis text"
+      }
+    },
+    "red": {
+      "0": {
+        "$value": "#fef1f0",
+        "$type": "color",
+        "$description": "Lightest red - error alert backgrounds, validation field backgrounds"
+      },
+      "1": {
+        "$value": "#fcdcda",
+        "$type": "color",
+        "$description": "Light red - hover state for error backgrounds"
+      },
+      "2": {
+        "$value": "#f9b8b4",
+        "$type": "color",
+        "$description": "Mid-light red - progress indicators, decorative"
+      },
+      "3": {
+        "$value": "#f4928c",
+        "$type": "color",
+        "$description": "Medium red - icons on error backgrounds"
+      },
+      "4": {
+        "$value": "#ed6a63",
+        "$type": "color",
+        "$description": "Mid red - error icons on white backgrounds"
+      },
+      "5": {
+        "$value": "#e5413a",
+        "$type": "color",
+        "$description": "Base red - primary destructive buttons, critical alerts"
+      },
+      "6": {
+        "$value": "#cf2720",
+        "$type": "color",
+        "$description": "Dark red - error text on white (6:1 contrast = AA), danger buttons"
+      },
+      "7": {
+        "$value": "#a01d18",
+        "$type": "color",
+        "$description": "Darker red - error text with maximum contrast (8:1 = AAA)"
+      },
+      "8": {
+        "$value": "#731511",
+        "$type": "color",
+        "$description": "Very dark red - text on light red backgrounds"
+      },
+      "9": {
+        "$value": "#480d0b",
+        "$type": "color",
+        "$description": "Darkest red - reserved for extreme emphasis"
+      }
+    },
+    "pink": {
+      "0": {
+        "$value": "#fdeef5",
+        "$type": "color",
+        "$description": "Lightest pink - subtle highlights, badge backgrounds"
+      },
+      "1": {
+        "$value": "#fad7e7",
+        "$type": "color",
+        "$description": "Light pink - hover states, selected rows"
+      },
+      "2": {
+        "$value": "#f5afcf",
+        "$type": "color",
+        "$description": "Mid-light pink - decorative borders"
+      },
+      "3": {
+        "$value": "#ee85b5",
+        "$type": "color",
+        "$description": "Medium pink - icons, illustrations"
+      },
+      "4": {
+        "$value": "#e55a9b",
+        "$type": "color",
+        "$description": "Mid pink - interactive elements"
+      },
+      "5": {
+        "$value": "#da2d80",
+        "$type": "color",
+        "$description": "Base pink - primary accent applications"
+      },
+      "6": {
+        "$value": "#b91f69",
+        "$type": "color",
+        "$description": "Dark pink - text on light pink backgrounds (AA compliant)"
+      },
+      "7": {
+        "$value": "#8e1851",
+        "$type": "color",
+        "$description": "Darker pink - high contrast applications"
+      },
+      "8": {
+        "$value": "#65113a",
+        "$type": "color",
+        "$description": "Very dark pink - text on light backgrounds"
+      },
+      "9": {
+        "$value": "#3f0b24",
+        "$type": "color",
+        "$description": "Darkest pink - maximum emphasis"
+      }
+    },
+    "grape": {
+      "0": {
+        "$value": "#fbeff9",
+        "$type": "color",
+        "$description": "Lightest grape - premium feature backgrounds"
+      },
+      "1": {
+        "$value": "#f5d9f1",
+        "$type": "color",
+        "$description": "Light grape - hover states"
+      },
+      "2": {
+        "$value": "#ebb3e3",
+        "$type": "color",
+        "$description": "Mid-light grape - decorative elements"
+      },
+      "3": {
+        "$value": "#df8bd3",
+        "$type": "color",
+        "$description": "Medium grape - icons, illustrations"
+      },
+      "4": {
+        "$value": "#d262c2",
+        "$type": "color",
+        "$description": "Mid grape - interactive accents"
+      },
+      "5": {
+        "$value": "#c338b0",
+        "$type": "color",
+        "$description": "Base grape - primary grape applications"
+      },
+      "6": {
+        "$value": "#a22993",
+        "$type": "color",
+        "$description": "Dark grape - text on light grape backgrounds"
+      },
+      "7": {
+        "$value": "#7c2071",
+        "$type": "color",
+        "$description": "Darker grape - high contrast"
+      },
+      "8": {
+        "$value": "#581750",
+        "$type": "color",
+        "$description": "Very dark grape - text applications"
+      },
+      "9": {
+        "$value": "#370e32",
+        "$type": "color",
+        "$description": "Darkest grape - maximum emphasis"
+      }
+    },
+    "violet": {
+      "0": {
+        "$value": "#f5f1fd",
+        "$type": "color",
+        "$description": "Lightest violet - feature highlight backgrounds"
+      },
+      "1": {
+        "$value": "#e6dcfa",
+        "$type": "color",
+        "$description": "Light violet - hover states"
+      },
+      "2": {
+        "$value": "#cdb9f5",
+        "$type": "color",
+        "$description": "Mid-light violet - decorative"
+      },
+      "3": {
+        "$value": "#b396ef",
+        "$type": "color",
+        "$description": "Medium violet - icons"
+      },
+      "4": {
+        "$value": "#9872e8",
+        "$type": "color",
+        "$description": "Mid violet - interactive elements"
+      },
+      "5": {
+        "$value": "#7c4ee0",
+        "$type": "color",
+        "$description": "Base violet - primary applications"
+      },
+      "6": {
+        "$value": "#6536c7",
+        "$type": "color",
+        "$description": "Dark violet - text on light backgrounds"
+      },
+      "7": {
+        "$value": "#4e2a99",
+        "$type": "color",
+        "$description": "Darker violet - high contrast"
+      },
+      "8": {
+        "$value": "#381e6d",
+        "$type": "color",
+        "$description": "Very dark violet - text"
+      },
+      "9": {
+        "$value": "#231344",
+        "$type": "color",
+        "$description": "Darkest violet - maximum emphasis"
+      }
+    },
+    "indigo": {
+      "0": {
+        "$value": "#f0f2fe",
+        "$type": "color",
+        "$description": "Lightest indigo - subtle backgrounds"
+      },
+      "1": {
+        "$value": "#dce0fc",
+        "$type": "color",
+        "$description": "Light indigo - hover states"
+      },
+      "2": {
+        "$value": "#b9c2f9",
+        "$type": "color",
+        "$description": "Mid-light indigo - decorative"
+      },
+      "3": {
+        "$value": "#96a3f5",
+        "$type": "color",
+        "$description": "Medium indigo - icons"
+      },
+      "4": {
+        "$value": "#7284f0",
+        "$type": "color",
+        "$description": "Mid indigo - interactive elements"
+      },
+      "5": {
+        "$value": "#4e65ea",
+        "$type": "color",
+        "$description": "Base indigo - primary applications"
+      },
+      "6": {
+        "$value": "#364fd0",
+        "$type": "color",
+        "$description": "Dark indigo - text on light backgrounds"
+      },
+      "7": {
+        "$value": "#2a3da0",
+        "$type": "color",
+        "$description": "Darker indigo - high contrast"
+      },
+      "8": {
+        "$value": "#1e2c72",
+        "$type": "color",
+        "$description": "Very dark indigo - text"
+      },
+      "9": {
+        "$value": "#131c47",
+        "$type": "color",
+        "$description": "Darkest indigo - maximum emphasis"
+      }
+    },
+    "blue": {
+      "0": {
+        "$value": "#eaf3fe",
+        "$type": "color",
+        "$description": "Lightest blue - primary light backgrounds, selected row highlights"
+      },
+      "1": {
+        "$value": "#cfe3fc",
+        "$type": "color",
+        "$description": "Light blue - hover backgrounds, info alert backgrounds"
+      },
+      "2": {
+        "$value": "#9fc8fa",
+        "$type": "color",
+        "$description": "Mid-light blue - progress bars, decorative"
+      },
+      "3": {
+        "$value": "#6eacf6",
+        "$type": "color",
+        "$description": "Medium blue - icons on light backgrounds"
+      },
+      "4": {
+        "$value": "#3c90f1",
+        "$type": "color",
+        "$description": "Mid blue - primary buttons on dark theme, links on dark"
+      },
+      "5": {
+        "$value": "#0974eb",
+        "$type": "color",
+        "$description": "Base blue - primary buttons, links (light theme)"
+      },
+      "6": {
+        "$value": "#0760c6",
+        "$type": "color",
+        "$description": "Dark blue - primary brand color, main CTAs, navigation active states"
+      },
+      "7": {
+        "$value": "#064a98",
+        "$type": "color",
+        "$description": "Darker blue - pressed states, text on light blue backgrounds"
+      },
+      "8": {
+        "$value": "#04356c",
+        "$type": "color",
+        "$description": "Very dark blue - high contrast text"
+      },
+      "9": {
+        "$value": "#032142",
+        "$type": "color",
+        "$description": "Darkest blue - maximum emphasis, dark accents"
+      }
+    },
+    "cyan": {
+      "0": {
+        "$value": "#e5f6fa",
+        "$type": "color",
+        "$description": "Lightest cyan - info backgrounds"
+      },
+      "1": {
+        "$value": "#c5eaf3",
+        "$type": "color",
+        "$description": "Light cyan - hover states"
+      },
+      "2": {
+        "$value": "#8cd6e7",
+        "$type": "color",
+        "$description": "Mid-light cyan - decorative"
+      },
+      "3": {
+        "$value": "#52c1da",
+        "$type": "color",
+        "$description": "Medium cyan - icons"
+      },
+      "4": {
+        "$value": "#17accc",
+        "$type": "color",
+        "$description": "Mid cyan - interactive elements"
+      },
+      "5": {
+        "$value": "#0d95b3",
+        "$type": "color",
+        "$description": "Base cyan - primary applications"
+      },
+      "6": {
+        "$value": "#0b7d96",
+        "$type": "color",
+        "$description": "Dark cyan - text on light backgrounds"
+      },
+      "7": {
+        "$value": "#086073",
+        "$type": "color",
+        "$description": "Darker cyan - high contrast"
+      },
+      "8": {
+        "$value": "#064552",
+        "$type": "color",
+        "$description": "Very dark cyan - text"
+      },
+      "9": {
+        "$value": "#042b33",
+        "$type": "color",
+        "$description": "Darkest cyan - maximum emphasis"
+      }
+    },
+    "teal": {
+      "0": {
+        "$value": "#e3f7f3",
+        "$type": "color",
+        "$description": "Lightest teal - subtle success backgrounds"
+      },
+      "1": {
+        "$value": "#c0ede4",
+        "$type": "color",
+        "$description": "Light teal - hover states"
+      },
+      "2": {
+        "$value": "#83dcc9",
+        "$type": "color",
+        "$description": "Mid-light teal - decorative"
+      },
+      "3": {
+        "$value": "#46caae",
+        "$type": "color",
+        "$description": "Medium teal - icons"
+      },
+      "4": {
+        "$value": "#10b794",
+        "$type": "color",
+        "$description": "Mid teal - interactive elements"
+      },
+      "5": {
+        "$value": "#0e9e80",
+        "$type": "color",
+        "$description": "Base teal - primary applications"
+      },
+      "6": {
+        "$value": "#0c846b",
+        "$type": "color",
+        "$description": "Dark teal - text on light backgrounds"
+      },
+      "7": {
+        "$value": "#096552",
+        "$type": "color",
+        "$description": "Darker teal - high contrast"
+      },
+      "8": {
+        "$value": "#06483b",
+        "$type": "color",
+        "$description": "Very dark teal - text"
+      },
+      "9": {
+        "$value": "#042d25",
+        "$type": "color",
+        "$description": "Darkest teal - maximum emphasis"
+      }
+    },
+    "green": {
+      "0": {
+        "$value": "#e7f6ec",
+        "$type": "color",
+        "$description": "Lightest green - success alert backgrounds, positive feedback areas"
+      },
+      "1": {
+        "$value": "#c9ead4",
+        "$type": "color",
+        "$description": "Light green - hover state for success backgrounds"
+      },
+      "2": {
+        "$value": "#94d6aa",
+        "$type": "color",
+        "$description": "Mid-light green - progress indicators, completion bars"
+      },
+      "3": {
+        "$value": "#5fc180",
+        "$type": "color",
+        "$description": "Medium green - success icons on light backgrounds"
+      },
+      "4": {
+        "$value": "#2aab58",
+        "$type": "color",
+        "$description": "Mid green - success badges, online indicators"
+      },
+      "5": {
+        "$value": "#1d9448",
+        "$type": "color",
+        "$description": "Base green - primary success buttons, checkmarks"
+      },
+      "6": {
+        "$value": "#187c3c",
+        "$type": "color",
+        "$description": "Dark green - success text on white (5:1 contrast = AA)"
+      },
+      "7": {
+        "$value": "#125f2e",
+        "$type": "color",
+        "$description": "Darker green - success text with maximum contrast"
+      },
+      "8": {
+        "$value": "#0d4421",
+        "$type": "color",
+        "$description": "Very dark green - text on light green backgrounds"
+      },
+      "9": {
+        "$value": "#082a15",
+        "$type": "color",
+        "$description": "Darkest green - extreme emphasis"
+      }
+    },
+    "lime": {
+      "0": {
+        "$value": "#eef6dc",
+        "$type": "color",
+        "$description": "Lightest lime - subtle backgrounds"
+      },
+      "1": {
+        "$value": "#daedb4",
+        "$type": "color",
+        "$description": "Light lime - hover states"
+      },
+      "2": {
+        "$value": "#b6db6e",
+        "$type": "color",
+        "$description": "Mid-light lime - decorative"
+      },
+      "3": {
+        "$value": "#93c82d",
+        "$type": "color",
+        "$description": "Medium lime - icons, highlights"
+      },
+      "4": {
+        "$value": "#7eb11c",
+        "$type": "color",
+        "$description": "Mid lime - interactive elements"
+      },
+      "5": {
+        "$value": "#6d9918",
+        "$type": "color",
+        "$description": "Base lime - primary applications"
+      },
+      "6": {
+        "$value": "#5b8014",
+        "$type": "color",
+        "$description": "Dark lime - text on light backgrounds"
+      },
+      "7": {
+        "$value": "#466210",
+        "$type": "color",
+        "$description": "Darker lime - high contrast"
+      },
+      "8": {
+        "$value": "#32460b",
+        "$type": "color",
+        "$description": "Very dark lime - text"
+      },
+      "9": {
+        "$value": "#1f2b07",
+        "$type": "color",
+        "$description": "Darkest lime - maximum emphasis"
+      }
+    },
+    "yellow": {
+      "0": {
+        "$value": "#fef6dc",
+        "$type": "color",
+        "$description": "Lightest yellow - warning backgrounds (must use dark text)"
+      },
+      "1": {
+        "$value": "#fceab3",
+        "$type": "color",
+        "$description": "Light yellow - hover state for warning backgrounds"
+      },
+      "2": {
+        "$value": "#f9d56a",
+        "$type": "color",
+        "$description": "Mid-light yellow - caution icons with dark stroke"
+      },
+      "3": {
+        "$value": "#f5c023",
+        "$type": "color",
+        "$description": "Medium yellow - warning badges (ensure dark text)"
+      },
+      "4": {
+        "$value": "#daa711",
+        "$type": "color",
+        "$description": "Mid yellow - decorative, charts"
+      },
+      "5": {
+        "$value": "#bc900f",
+        "$type": "color",
+        "$description": "Base yellow - rarely used for text"
+      },
+      "6": {
+        "$value": "#9d780c",
+        "$type": "color",
+        "$description": "Dark yellow - minimum for text (check contrast)"
+      },
+      "7": {
+        "$value": "#795c0a",
+        "$type": "color",
+        "$description": "Darker yellow - warning text on light backgrounds (4.5:1)"
+      },
+      "8": {
+        "$value": "#564207",
+        "$type": "color",
+        "$description": "Very dark yellow - safe for body text on white"
+      },
+      "9": {
+        "$value": "#352904",
+        "$type": "color",
+        "$description": "Darkest yellow - high contrast text"
+      }
+    },
+    "orange": {
+      "0": {
+        "$value": "#fef1e6",
+        "$type": "color",
+        "$description": "Lightest orange - promotional backgrounds"
+      },
+      "1": {
+        "$value": "#fcddc6",
+        "$type": "color",
+        "$description": "Light orange - hover states"
+      },
+      "2": {
+        "$value": "#f9bb8f",
+        "$type": "color",
+        "$description": "Mid-light orange - decorative"
+      },
+      "3": {
+        "$value": "#f49857",
+        "$type": "color",
+        "$description": "Medium orange - icons, highlights"
+      },
+      "4": {
+        "$value": "#ed7621",
+        "$type": "color",
+        "$description": "Mid orange - interactive elements"
+      },
+      "5": {
+        "$value": "#d2620f",
+        "$type": "color",
+        "$description": "Base orange - primary applications"
+      },
+      "6": {
+        "$value": "#af520c",
+        "$type": "color",
+        "$description": "Dark orange - text on light backgrounds"
+      },
+      "7": {
+        "$value": "#873f0a",
+        "$type": "color",
+        "$description": "Darker orange - high contrast"
+      },
+      "8": {
+        "$value": "#612d07",
+        "$type": "color",
+        "$description": "Very dark orange - text"
+      },
+      "9": {
+        "$value": "#3c1c04",
+        "$type": "color",
+        "$description": "Darkest orange - maximum emphasis"
+      }
+    }
+  },
+  "breakpoints": {
+    "xs": {
+      "$value": "36em",
+      "$type": "dimension",
+      "$description": "Extra small breakpoint (576px). Use for: large phones in landscape, small tablets. Content starts having room to breathe. Typical changes: side-by-side layouts begin, hiding mobile-only elements. Above this: no longer 'mobile-only' context."
+    },
+    "sm": {
+      "$value": "48em",
+      "$type": "dimension",
+      "$description": "Small breakpoint (768px). Use for: tablets in portrait, small laptops. Two-column layouts become comfortable. Typical changes: sidebars can appear, cards go 2-up, navigation expands. Common tablet breakpoint. Desktop-like experiences begin here."
+    },
+    "md": {
+      "$value": "62em",
+      "$type": "dimension",
+      "$description": "Medium breakpoint (992px). Use for: tablets in landscape, standard laptops, small desktops. Full desktop layouts are comfortable. Typical changes: three-column layouts, full navigation, expanded sidebars. Most 'desktop' designs target this minimum."
+    },
+    "lg": {
+      "$value": "75em",
+      "$type": "dimension",
+      "$description": "Large breakpoint (1200px). Use for: large laptops, standard desktop monitors. Generous space available. Typical changes: four-column grids, expanded dashboards, side panels. Content max-widths often kick in here to prevent over-stretching."
+    },
+    "xl": {
+      "$value": "88em",
+      "$type": "dimension",
+      "$description": "Extra large breakpoint (1408px). Use for: large desktop monitors, high-resolution displays. Maximum layouts. Typical changes: ultra-wide layouts, multi-panel views, data-dense dashboards. Consider max-width constraints - too wide hurts readability."
+    }
+  },
+  "contentWidth": {
+    "sm": {
+      "$value": "37.5em",
+      "$type": "dimension",
+      "$description": "Small content width (600px). Use for: prose content, documentation, blog posts, reading-focused layouts. Optimal line length for readability (~65-75 characters). Common in: article bodies, help documentation, settings panels, narrow modals."
+    },
+    "lg": {
+      "$value": "80em",
+      "$type": "dimension",
+      "$description": "Large content width (1280px). Use for: full application layouts, dashboards, data-heavy interfaces. Maximum comfortable width for most content. Common in: main app container, dashboard layouts, admin interfaces. Beyond this, consider multi-column or sidebar layouts."
+    }
+  },
+  "radius": {
+    "xs": {
+      "$value": "0.125rem",
+      "$type": "dimension",
+      "$description": "Extra small radius (2px). Use for: small badges, tags, inline code blocks, tiny indicators, nested elements inside sm-radius containers. Barely perceptible rounding - softens without calling attention. Common in: chip components, status dots, code snippets."
+    },
+    "sm": {
+      "$value": "0.25rem",
+      "$type": "dimension",
+      "$description": "Small radius (4px). DEFAULT for small components. Use for: buttons, inputs, dropdowns, tooltips, small cards, table cells. The workhorse radius - professional and subtle. Most form elements use this. Common in: Button, Input, Select, Badge, Alert."
+    },
+    "md": {
+      "$value": "0.5rem",
+      "$type": "dimension",
+      "$description": "Medium radius (8px). Use for: cards, modals, dialogs, larger containers, image thumbnails, panels. Creates friendly, approachable feel without being playful. Common in: Card, Modal, Popover, larger interactive surfaces."
+    },
+    "lg": {
+      "$value": "1rem",
+      "$type": "dimension",
+      "$description": "Large radius (16px). Use for: hero cards, featured content, marketing components, prominent UI elements. Noticeably rounded - use intentionally for emphasis or friendly tone. Common in: feature cards, promotional banners, onboarding modals."
+    },
+    "xl": {
+      "$value": "2rem",
+      "$type": "dimension",
+      "$description": "Extra large radius (32px). Use for: hero sections, large promotional elements, artistic layouts, very large cards. Significantly rounded - creates soft, approachable aesthetic. Use sparingly - can feel too casual for business applications."
+    },
+    "full": {
+      "$value": "9999px",
+      "$type": "dimension",
+      "$description": "Full/pill radius (circular). Use for: avatar circles, round buttons, pill-shaped tags, circular indicators, FABs. Creates perfect circles on square elements or pill shapes on rectangles. Common in: Avatar, round IconButton, pill Badge, circular progress."
+    }
+  },
+  "sizing": {
+    "input": {
+      "xs": {
+        "$value": "1.875rem",
+        "$type": "dimension",
+        "$description": "Extra small input height (30px). Use for: compact forms, inline editing, space-constrained UIs."
+      },
+      "sm": {
+        "$value": "2.25rem",
+        "$type": "dimension",
+        "$description": "Small input height (36px). Use for: secondary inputs, compact layouts, mobile-optimized forms."
+      },
+      "md": {
+        "$value": "2.625rem",
+        "$type": "dimension",
+        "$description": "Medium input height (42px). DEFAULT size for most inputs. Use for: standard forms, primary data entry."
+      },
+      "lg": {
+        "$value": "3rem",
+        "$type": "dimension",
+        "$description": "Large input height (48px). Use for: prominent inputs, touch-optimized UIs, hero forms."
+      },
+      "xl": {
+        "$value": "3.75rem",
+        "$type": "dimension",
+        "$description": "Extra large input height (60px). Use for: marketing forms, high-emphasis inputs, accessibility focus."
+      }
+    },
+    "button": {
+      "xs": {
+        "$value": "1.875rem",
+        "$type": "dimension",
+        "$description": "Extra small button height (30px). Use for: inline actions, compact toolbars, icon-only buttons."
+      },
+      "sm": {
+        "$value": "2.25rem",
+        "$type": "dimension",
+        "$description": "Small button height (36px). Use for: secondary actions, compact layouts, less prominent CTAs."
+      },
+      "md": {
+        "$value": "2.625rem",
+        "$type": "dimension",
+        "$description": "Medium button height (42px). DEFAULT size for most buttons. Use for: primary actions, form submits."
+      },
+      "lg": {
+        "$value": "3rem",
+        "$type": "dimension",
+        "$description": "Large button height (48px). Use for: prominent CTAs, hero sections, touch-optimized UIs."
+      },
+      "xl": {
+        "$value": "3.75rem",
+        "$type": "dimension",
+        "$description": "Extra large button height (60px). Use for: marketing CTAs, high-emphasis actions."
+      }
+    },
+    "icon": {
+      "xs": {
+        "$value": "0.75rem",
+        "$type": "dimension",
+        "$description": "Extra small icon size (12px). Use for: inline indicators, badge icons, compact UIs."
+      },
+      "sm": {
+        "$value": "1rem",
+        "$type": "dimension",
+        "$description": "Small icon size (16px). Use for: inline icons, button icons with text, input icons."
+      },
+      "md": {
+        "$value": "1.25rem",
+        "$type": "dimension",
+        "$description": "Medium icon size (20px). DEFAULT for most icons. Use for: standalone icons, navigation icons."
+      },
+      "lg": {
+        "$value": "1.5rem",
+        "$type": "dimension",
+        "$description": "Large icon size (24px). Use for: prominent icons, action icons, toolbar icons."
+      },
+      "xl": {
+        "$value": "2rem",
+        "$type": "dimension",
+        "$description": "Extra large icon size (32px). Use for: feature icons, empty state illustrations, marketing icons."
+      }
+    }
+  },
+  "spacing": {
+    "xs": {
+      "$value": "0.625rem",
+      "$type": "dimension",
+      "$description": "Extra small spacing (10px). Use for: tight padding in compact components, icon-to-text gaps, inline element spacing, dense data tables. Common in: badges, tags, compact buttons, chip components."
+    },
+    "sm": {
+      "$value": "0.75rem",
+      "$type": "dimension",
+      "$description": "Small spacing (12px). Use for: standard component internal padding, form field padding, list item padding, card content padding. Common in: buttons, inputs, dropdowns, list items."
+    },
+    "md": {
+      "$value": "1rem",
+      "$type": "dimension",
+      "$description": "Medium spacing (16px). DEFAULT spacing value. Use for: standard gaps between elements, modal padding, card padding, section padding within components. Most common spacing value in the system."
+    },
+    "lg": {
+      "$value": "1.25rem",
+      "$type": "dimension",
+      "$description": "Large spacing (20px). Use for: generous padding, separation between related groups, dialog/modal padding, card spacing. Creates breathing room without excessive whitespace."
+    },
+    "xl": {
+      "$value": "2rem",
+      "$type": "dimension",
+      "$description": "Extra large spacing (32px). Use for: major section separation, page-level margins, large component padding, hero sections. Creates significant visual separation between unrelated content areas."
+    }
+  },
+  "gridSpacing": {
+    "xs": {
+      "$value": "8px",
+      "$type": "dimension",
+      "$description": "Extra small grid gap (8px). Use for: compact card grids, dense dashboard layouts, mobile-optimized grids, icon grids. Minimum comfortable gap for touch targets."
+    },
+    "sm": {
+      "$value": "16px",
+      "$type": "dimension",
+      "$description": "Small grid gap (16px). Use for: standard card grids, form layouts, compact dashboard grids. Good default for most grid layouts."
+    },
+    "md": {
+      "$value": "24px",
+      "$type": "dimension",
+      "$description": "Medium grid gap (24px). Use for: default content grids, spacious card layouts, comfortable dashboard grids. Balances density with readability."
+    },
+    "lg": {
+      "$value": "32px",
+      "$type": "dimension",
+      "$description": "Large grid gap (32px). Use for: spacious card layouts, content grids, marketing pages. Good for layouts with larger cards or content blocks."
+    },
+    "xl": {
+      "$value": "40px",
+      "$type": "dimension",
+      "$description": "Extra large grid gap (40px). Use for: hero grids, feature showcases, landing page layouts. Creates clear separation between grid items."
+    },
+    "xxl": {
+      "$value": "48px",
+      "$type": "dimension",
+      "$description": "Double extra large grid gap (48px). Use for: maximum separation in grids, presentation layouts, sparse artistic layouts. Rarely needed - consider if layout needs restructuring."
+    }
+  },
+  "verticalRhythm": {
+    "xs": {
+      "$value": "0.4rem",
+      "$type": "dimension",
+      "$description": "Quarter baseline (6.4px). Use for: list item spacing within tight lists, line spacing adjustments, micro-spacing in prose. Minimal vertical separation."
+    },
+    "sm": {
+      "$value": "0.8rem",
+      "$type": "dimension",
+      "$description": "Half baseline (12.8px). Use for: heading bottom margins, spacing after inline elements, paragraph-adjacent element spacing. Creates subtle but noticeable separation."
+    },
+    "md": {
+      "$value": "1.6rem",
+      "$type": "dimension",
+      "$description": "Single baseline (25.6px). DEFAULT prose spacing. Use for: paragraph margins, standard content block spacing, default vertical rhythm. One full line height of separation."
+    },
+    "lg": {
+      "$value": "2.4rem",
+      "$type": "dimension",
+      "$description": "1.5 baselines (38.4px). Use for: heading top margins, spacing before new sections within content, emphasis breaks. Creates clear topic transitions."
+    },
+    "xl": {
+      "$value": "3.2rem",
+      "$type": "dimension",
+      "$description": "Double baseline (51.2px). Use for: major section breaks in prose, chapter-level separations, significant content divisions. Two full line heights of separation."
+    },
+    "2xl": {
+      "$value": "4.8rem",
+      "$type": "dimension",
+      "$description": "Triple baseline (76.8px). Use for: page section breaks, major content area separations, hero-to-content transitions. Maximum prose spacing - use sparingly."
+    }
+  },
+  "shadow": {
+    "xs": {
+      "$value": "0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.05), 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.1)",
+      "$type": "shadow",
+      "$description": "Extra small shadow - minimal elevation (1-2dp). Use for: subtle depth on cards at rest, input fields, low-emphasis containers, elements that could be flat. Barely noticeable - adds dimension without prominence. Common in: Card default state, Input fields, Table rows, subtle separation."
+    },
+    "sm": {
+      "$value": "0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0 0.625rem 0.9375rem -0.3125rem, rgba(0, 0, 0, 0.04) 0 0.4375rem 0.4375rem -0.3125rem",
+      "$type": "shadow",
+      "$description": "Small shadow - low elevation (4-6dp). Use for: card hover states, raised buttons, navigation elements, slightly prominent containers. Noticeable but not dramatic elevation. Common in: Card:hover, Button:raised, Dropdown trigger, Navigation bar, elevated sections."
+    },
+    "md": {
+      "$value": "0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0 1.25rem 1.5625rem -0.3125rem, rgba(0, 0, 0, 0.04) 0 0.625rem 0.625rem -0.3125rem",
+      "$type": "shadow",
+      "$description": "Medium shadow - moderate elevation (8-12dp). DEFAULT for floating elements. Use for: dropdown menus, popovers, tooltips, floating action buttons, autocomplete lists. Clearly floating above content. Common in: Dropdown menu, Popover, Select options, Autocomplete, FAB."
+    },
+    "lg": {
+      "$value": "0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0 1.75rem 1.4375rem -0.4375rem, rgba(0, 0, 0, 0.04) 0 0.75rem 0.75rem -0.4375rem",
+      "$type": "shadow",
+      "$description": "Large shadow - high elevation (16-24dp). Use for: dialogs, modals, drawers, notification toasts, temporary UI surfaces. Significantly elevated - demands attention. Common in: Modal dialogs, side Drawer, Toast notifications, contextual menus requiring focus."
+    },
+    "xl": {
+      "$value": "0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0 2.25rem 1.75rem -0.4375rem, rgba(0, 0, 0, 0.04) 0 1.0625rem 1.0625rem -0.4375rem",
+      "$type": "shadow",
+      "$description": "Extra large shadow - maximum elevation (24dp+). Use for: critical modals, full-screen overlays, maximum prominence elements. Dramatic elevation - use sparingly. Common in: Full-screen modals, critical dialogs, onboarding overlays, image lightboxes."
+    },
+    "inset": {
+      "$value": "inset 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1)",
+      "$type": "shadow",
+      "$description": "Inset shadow - pressed/recessed appearance. Use for: pressed button states, input:focus, toggle switches (off state), embedded content areas. Creates illusion of pressing INTO the surface. Common in: Button:active, pressed toggles, embedded wells, search input backgrounds."
+    },
+    "footer": {
+      "$value": "0 -0.0625rem 0.1875rem rgba(0, 0, 0, 0.05), 0 -0.625rem 0.9375rem -0.3125rem rgba(0, 0, 0, 0.04), 0 -0.4375rem 0.4375rem -0.3125rem rgba(0, 0, 0, 0.04)",
+      "$type": "shadow",
+      "$description": "Footer shadow - upward-casting shadow for fixed footers. Use for: sticky footers, bottom navigation bars, action bars at bottom of screen. Shadow casts upward to show footer is above scrolling content. Common in: sticky page footers, bottom action bars, mobile bottom nav."
+    },
+    "none": {
+      "$value": "none",
+      "$type": "shadow",
+      "$description": "No shadow - flat appearance. Use for: flat design elements, removing inherited shadows, elements that should appear flush with background, focus states that use outline instead. CSS keyword. Common in: flat buttons, inline elements, focus states using outline."
+    }
+  },
+  "focus": {
+    "ring": {
+      "width": {
+        "$value": "3px",
+        "$type": "dimension",
+        "$description": "Focus ring width (3px). Thick enough to be clearly visible per WCAG 2.4.11 (Focus Appearance). Use for: outline-width property. 3px provides clear visibility without being obtrusive. Consistent across all focusable elements."
+      },
+      "offset": {
+        "$value": "2px",
+        "$type": "dimension",
+        "$description": "Focus ring offset from element (2px). Creates gap between element and focus ring for clarity. Use for: outline-offset property. Prevents focus ring from overlapping element borders. Ensures ring is visible on both light and dark backgrounds."
+      },
+      "color": {
+        "$value": "{color.blue.5}",
+        "$type": "color",
+        "$description": "Focus ring color (primary blue). High-visibility color that works on most backgrounds. Reference to color.blue.5 for consistency with primary brand color. ACCESSIBILITY: Ensure 3:1 contrast ratio against adjacent colors. May need adjustment for dark theme."
+      }
+    }
+  },
+  "zIndex": {
+    "base": {
+      "$value": 0,
+      "$type": "number",
+      "$description": "Base layer (z-index: 0). DEFAULT for all standard content. Use for: page content, cards, sections, anything in normal document flow. Establishes baseline - everything else stacks above this. Never use negative z-index unless absolutely necessary."
+    },
+    "dropdown": {
+      "$value": 100,
+      "$type": "number",
+      "$description": "Dropdown layer (z-index: 100). Use for: dropdown menus, select options, autocomplete lists, combobox panels. First elevated layer - appears above base content but below sticky headers. Common in: Select menu, Dropdown, Autocomplete, Menu, Popover (when not in modal)."
+    },
+    "sticky": {
+      "$value": 200,
+      "$type": "number",
+      "$description": "Sticky layer (z-index: 200). Use for: sticky headers, fixed navigation, persistent UI elements, scroll-aware banners. Stays visible during scroll but below overlay content. Common in: Sticky header, fixed sidebar, persistent action bars, scroll-to-top buttons."
+    },
+    "overlay": {
+      "$value": 300,
+      "$type": "number",
+      "$description": "Overlay layer (z-index: 300). Use for: modal backdrops, drawer overlays, lightbox backgrounds, focus-trap containers. Dims/blocks underlying content. Separate from modal content to allow proper stacking. Common in: Modal backdrop, Drawer backdrop, lightbox overlay."
+    },
+    "modal": {
+      "$value": 400,
+      "$type": "number",
+      "$description": "Modal layer (z-index: 400). Use for: modal dialogs, side drawers, full-screen overlays, dialog content. Primary overlay content layer - above backdrop but below popovers. Common in: Modal content, Drawer content, Dialog, Sheet, full-screen menus."
+    },
+    "popover": {
+      "$value": 500,
+      "$type": "number",
+      "$description": "Popover layer (z-index: 500). Use for: popovers triggered from within modals, nested floating elements, color pickers, date pickers in modals. Above modal content but below tooltips. Common in: DatePicker in modal, ColorPicker in modal, nested menus."
+    },
+    "tooltip": {
+      "$value": 600,
+      "$type": "number",
+      "$description": "Tooltip layer (z-index: 600). HIGHEST standard layer. Use for: tooltips, toasts, notifications, snackbars, any element that must be visible above everything else. Always on top - critical information. Common in: Tooltip, Toast, Snackbar, notification badges, loading indicators."
+    }
+  },
+  "motion": {
+    "duration": {
+      "instant": {
+        "$value": "0ms",
+        "$type": "duration",
+        "$description": "Instant/no duration (0ms). Use for: prefers-reduced-motion fallback, immediate state changes, disabled animations, no-transition scenarios. CSS: transition-duration: 0ms; effectively disables transitions. ACCESSIBILITY: Use this as fallback for users who prefer reduced motion."
+      },
+      "fast": {
+        "$value": "100ms",
+        "$type": "duration",
+        "$description": "Fast transitions (100ms). Use for: micro-interactions, hover states, button presses, checkbox toggles, small element transitions, focus rings. Feels instantaneous but smooth. Anything faster is imperceptible. Common in: hover color changes, button active states, toggle switches, icon transitions."
+      },
+      "normal": {
+        "$value": "200ms",
+        "$type": "duration",
+        "$description": "Normal transitions (200ms). DEFAULT duration for most UI transitions. Use for: dropdown menus, tooltips, tab switches, sidebar toggles, modal fade-ins, standard UI feedback. Balanced: noticeable but not slow. Common in: Dropdown, Tooltip, Tab panels, collapsible sections."
+      },
+      "slow": {
+        "$value": "300ms",
+        "$type": "duration",
+        "$description": "Slow transitions (300ms). Use for: larger element transitions, slide-in panels, accordion expansions, page section reveals, image transitions. Gives eye time to track larger movements. Common in: sidebar slide, accordion panels, card reveals, hero image transitions."
+      },
+      "slower": {
+        "$value": "500ms",
+        "$type": "duration",
+        "$description": "Slower transitions (500ms). MAXIMUM recommended duration. Use for: full-page transitions, dramatic reveals, onboarding animations, marketing flourishes. Any longer feels unresponsive. Use sparingly - only for intentional dramatic effect. Common in: page transitions, hero animations, loading sequences."
+      }
+    },
+    "easing": {
+      "linear": {
+        "$value": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "$type": "cubicBezier",
+        "$description": "Linear easing - constant speed, no acceleration. CSS: linear. Use for: progress bars, looping animations, continuous scrolling, mechanical movements. Feels robotic/artificial - avoid for UI interactions. Only use when constant speed is intentionally desired. Common in: progress indicators, loading spinners, continuous carousels."
+      },
+      "ease": {
+        "$value": [
+          0.25,
+          0.1,
+          0.25,
+          1
+        ],
+        "$type": "cubicBezier",
+        "$description": "Standard ease curve - CSS default. Quick start, gradual slow-down. Use for: general-purpose transitions when specific easing isn't needed. Good default but 'easeOut' often feels better for UI. CSS: ease. Common in: fallback transitions, simple state changes."
+      },
+      "easeIn": {
+        "$value": [
+          0.42,
+          0,
+          1,
+          1
+        ],
+        "$type": "cubicBezier",
+        "$description": "Ease in - starts slow, accelerates. CSS: ease-in. Use for: elements LEAVING the screen, dismissals, fade-outs, exits. Creates sense of departure/acceleration away. AVOID for entrances - feels sluggish. Common in: modal dismiss, toast exit, dropdown close, element removal animations."
+      },
+      "easeOut": {
+        "$value": [
+          0,
+          0,
+          0.58,
+          1
+        ],
+        "$type": "cubicBezier",
+        "$description": "Ease out - starts fast, decelerates. CSS: ease-out. RECOMMENDED for most UI transitions. Use for: elements ENTERING the screen, reveals, expansions, focus states. Creates sense of arrival/settling into place. Feels responsive and natural. Common in: modal open, tooltip appear, dropdown open, hover effects."
+      },
+      "easeInOut": {
+        "$value": [
+          0.42,
+          0,
+          0.58,
+          1
+        ],
+        "$type": "cubicBezier",
+        "$description": "Ease in and out - slow start, fast middle, slow end. CSS: ease-in-out. Use for: elements transforming in place, position changes, size changes, bidirectional animations. Natural for movements that start and end at rest. Common in: tab transitions, carousel slides, position animations, transform effects."
+      },
+      "emphasized": {
+        "$value": [
+          0.2,
+          0,
+          0,
+          1
+        ],
+        "$type": "cubicBezier",
+        "$description": "Emphasized deceleration - quick start, strong deceleration. Custom Material-inspired curve. Use for: attention-grabbing entrances, important notifications, emphasized reveals, dramatic effect. More pronounced than standard easeOut. Use sparingly for emphasis. Common in: snackbar/toast entrance, important alerts, feature reveals, celebration animations."
+      }
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "sans": {
+        "$value": "'Public Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+        "$type": "fontFamily",
+        "$description": "Primary sans-serif font stack. Use for: all body text, UI labels, form inputs, general content. Public Sans is a neutral, open-source typeface optimized for UI and web. Fallbacks: Helvetica Neue (macOS), Helvetica (older Mac), Arial (Windows/Linux), system sans-serif. LOADING: Include weights 400, 500, 600, 700 for full design system support."
+      },
+      "heading": {
+        "$value": "'Atkinson Hyperlegible Next', 'Atkinson Hyperlegible', 'Public Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+        "$type": "fontFamily",
+        "$description": "Heading/display font stack optimized for accessibility. Atkinson Hyperlegible Next (by Braille Institute) is designed for maximum legibility, especially for users with low vision. Use for: page titles, section headings, hero text, marketing content. Distinct letterforms reduce character confusion. Falls back to Public Sans for consistency."
+      },
+      "mono": {
+        "$value": "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
+        "$type": "fontFamily",
+        "$description": "Monospace font stack for code and technical content. Use for: code blocks, inline code, terminal output, data tables with alignment needs, API references. ui-monospace uses system default (SF Mono on Mac, Cascadia on Windows 11). Fallbacks cover all major platforms. All characters have equal width for alignment."
+      }
+    },
+    "fontSize": {
+      "xs": {
+        "$value": "0.75rem",
+        "$type": "dimension",
+        "$description": "Extra small font size (12px). MINIMUM readable size. Use for: helper text, timestamps, metadata, legal text, footnotes, badge content. Requires high contrast - use with strong foreground colors. Not recommended for primary content. Common in: timestamps, version numbers, copyright notices."
+      },
+      "sm": {
+        "$value": "0.875rem",
+        "$type": "dimension",
+        "$description": "Small font size (14px). Use for: secondary text, table content, form labels, captions, sidebar content. Comfortable for extended reading in UI contexts. Common in: data tables, form labels, navigation items, secondary buttons. Good balance of density and readability."
+      },
+      "md": {
+        "$value": "1rem",
+        "$type": "dimension",
+        "$description": "Medium font size (16px). DEFAULT body text size. Use for: primary body text, paragraphs, form inputs, buttons, main content. Browser default - optimal for extended reading. WCAG baseline assumption for contrast calculations. Common in: body text, input values, primary UI text."
+      },
+      "lg": {
+        "$value": "1.125rem",
+        "$type": "dimension",
+        "$description": "Large font size (18px). Use for: lead paragraphs, emphasized body text, large UI elements, card titles. Slightly larger for emphasis without being a heading. Common in: intro paragraphs, feature descriptions, prominent labels, large button text."
+      },
+      "xl": {
+        "$value": "1.25rem",
+        "$type": "dimension",
+        "$description": "Extra large font size (20px). Use for: small headings (h5-h6), subtitle text, section labels, prominent UI elements. Bridges gap between body and heading sizes. Common in: card headings, modal titles, section headers within content."
+      },
+      "2xl": {
+        "$value": "1.375rem",
+        "$type": "dimension",
+        "$description": "2x large font size (22px). Use for: medium headings (h4), component titles, feature headings. Clearly heading-sized but not dominant. Common in: h4 headings, sidebar section titles, panel headers."
+      },
+      "3xl": {
+        "$value": "1.625rem",
+        "$type": "dimension",
+        "$description": "3x large font size (26px). Use for: prominent headings (h3), page section titles. Commands attention without overwhelming. Common in: h3 headings, dashboard section titles, feature section headers."
+      },
+      "4xl": {
+        "$value": "2.125rem",
+        "$type": "dimension",
+        "$description": "4x large font size (34px). Use for: major headings (h1-h2), page titles, hero text. Primary visual hierarchy anchor. Common in: page titles, h1/h2 headings, hero headlines. Pair with lineHeight.xs or lineHeight.sm for tighter leading."
+      }
+    },
+    "fontWeight": {
+      "light": {
+        "$value": 300,
+        "$type": "fontWeight",
+        "$description": "Light font weight (300). Use sparingly for: large display text, hero headlines, artistic/elegant contexts, stylized marketing content. CAUTION: Poor readability at small sizes or low contrast. Never use for body text or UI labels. Requires high contrast ratio. Common in: hero text, large quotes, stylized headings."
+      },
+      "regular": {
+        "$value": 400,
+        "$type": "fontWeight",
+        "$description": "Regular font weight (400). DEFAULT weight for all body text. Use for: paragraphs, descriptions, general content, form input values, most UI text. Optimized for extended reading. Most content should use this weight. Common in: body text, input values, descriptions, help text."
+      },
+      "medium": {
+        "$value": 500,
+        "$type": "fontWeight",
+        "$description": "Medium font weight (500). Use for: subtle emphasis, navigation items, form labels, table headers, slightly prominent UI text. Noticeable but not bold - professional emphasis. Common in: nav items, active states, form labels, table column headers, subheadings."
+      },
+      "semibold": {
+        "$value": 600,
+        "$type": "fontWeight",
+        "$description": "Semibold font weight (600). Use for: buttons, important labels, card titles, moderate emphasis headings. Strong emphasis without the heaviness of bold. Common in: button text, card titles, important labels, h4-h6 headings, badge text, tab labels."
+      },
+      "bold": {
+        "$value": 700,
+        "$type": "fontWeight",
+        "$description": "Bold font weight (700). Use for: headings (h1-h3), strong emphasis, critical information, maximum text prominence. Reserve for true emphasis - overuse dilutes impact. Common in: h1-h3 headings, alert titles, critical labels, strong inline emphasis (<strong>)."
+      }
+    },
+    "headings": {
+      "fontWeight": {
+        "$value": "{typography.fontWeight.bold}",
+        "$type": "fontWeight",
+        "$description": "Default font weight for all headings."
+      },
+      "h1": {
+        "fontSize": {
+          "$value": "{typography.fontSize.4xl}",
+          "$type": "dimension",
+          "$description": "H1 font size (34px). Use for page titles."
+        },
+        "fontWeight": {
+          "$value": "{typography.fontWeight.bold}",
+          "$type": "fontWeight",
+          "$description": "Bold weight (700) for maximum visual hierarchy on page titles."
+        },
+        "lineHeight": {
+          "$value": "{typography.lineHeight.xs}",
+          "$type": "number",
+          "$description": "Tight line height for large headings."
+        }
+      },
+      "h2": {
+        "fontSize": {
+          "$value": "{typography.fontSize.3xl}",
+          "$type": "dimension",
+          "$description": "H2 font size (26px). Use for section headings."
+        },
+        "fontWeight": {
+          "$value": "{typography.fontWeight.bold}",
+          "$type": "fontWeight",
+          "$description": "Bold weight (700) for strong section hierarchy."
+        },
+        "lineHeight": {
+          "$value": "{typography.lineHeight.xs}",
+          "$type": "number",
+          "$description": "Tight line height (1.2) for compact section headings."
+        }
+      },
+      "h3": {
+        "fontSize": {
+          "$value": "{typography.fontSize.2xl}",
+          "$type": "dimension",
+          "$description": "H3 font size (22px). Use for subsection headings."
+        },
+        "fontWeight": {
+          "$value": "{typography.fontWeight.semibold}",
+          "$type": "fontWeight",
+          "$description": "Semibold weight (600) for clear subsection emphasis."
+        },
+        "lineHeight": {
+          "$value": "{typography.lineHeight.sm}",
+          "$type": "number",
+          "$description": "Snug line height (1.35) for medium-sized headings."
+        }
+      },
+      "h4": {
+        "fontSize": {
+          "$value": "{typography.fontSize.xl}",
+          "$type": "dimension",
+          "$description": "H4 font size (20px). Use for card titles."
+        },
+        "fontWeight": {
+          "$value": "{typography.fontWeight.semibold}",
+          "$type": "fontWeight",
+          "$description": "Semibold weight (600) for card and component titles."
+        },
+        "lineHeight": {
+          "$value": "{typography.lineHeight.sm}",
+          "$type": "number",
+          "$description": "Snug line height (1.35) for card title readability."
+        }
+      },
+      "h5": {
+        "fontSize": {
+          "$value": "{typography.fontSize.lg}",
+          "$type": "dimension",
+          "$description": "H5 font size (18px). Use for small headings."
+        },
+        "fontWeight": {
+          "$value": "{typography.fontWeight.semibold}",
+          "$type": "fontWeight",
+          "$description": "Semibold weight (600) for minor section emphasis."
+        },
+        "lineHeight": {
+          "$value": "{typography.lineHeight.sm}",
+          "$type": "number",
+          "$description": "Snug line height (1.35) for compact minor headings."
+        }
+      },
+      "h6": {
+        "fontSize": {
+          "$value": "{typography.fontSize.md}",
+          "$type": "dimension",
+          "$description": "H6 font size (16px). Use for label-like headings."
+        },
+        "fontWeight": {
+          "$value": "{typography.fontWeight.semibold}",
+          "$type": "fontWeight",
+          "$description": "Semibold weight (600) for label-style heading emphasis."
+        },
+        "lineHeight": {
+          "$value": "{typography.lineHeight.md}",
+          "$type": "number",
+          "$description": "Normal line height (1.5) matching body text rhythm."
+        }
+      }
+    },
+    "letterSpacing": {
+      "tighter": {
+        "$value": "-0.05em",
+        "$type": "dimension",
+        "$description": "Tighter tracking (-0.05em). Use for: very large display text (48px+), hero headlines, logos. Brings characters closer for visual cohesion at large sizes. CAUTION: Can reduce readability if overused."
+      },
+      "tight": {
+        "$value": "-0.025em",
+        "$type": "dimension",
+        "$description": "Slightly tight tracking (-0.025em). Use for: large headings (h1-h2), medium display text. Subtle tightening that improves visual density without sacrificing readability."
+      },
+      "normal": {
+        "$value": "0",
+        "$type": "dimension",
+        "$description": "Default letter spacing (0). DEFAULT for all body text and most headings. Let the typeface's natural spacing work. Optimal for reading comprehension."
+      },
+      "wide": {
+        "$value": "0.025em",
+        "$type": "dimension",
+        "$description": "Slightly wide tracking (0.025em). Use for: small text (12px or less), captions that need more breathing room. Improves legibility at small sizes."
+      },
+      "wider": {
+        "$value": "0.05em",
+        "$type": "dimension",
+        "$description": "Wide tracking (0.05em). Use for: small caps, labels, overlines, all-caps text. Prevents all-caps text from feeling cramped. Common in: button text (sometimes), navigation labels, category headers."
+      },
+      "widest": {
+        "$value": "0.1em",
+        "$type": "dimension",
+        "$description": "Maximum tracking (0.1em). Use for: stylistic emphasis, spaced-out headings, decorative typography. Very pronounced spacing for special typographic treatments. Use sparingly."
+      }
+    },
+    "lineHeight": {
+      "xs": {
+        "$value": 1.2,
+        "$type": "number",
+        "$description": "Tight line height (1.2 / 120%). Use for: large display headings, hero text, single-line elements, buttons, badges. Text appears compact and impactful. CAUTION: Not accessible for multi-line body text. Only use for headings 24px+ or single-line UI elements. Common in: h1, hero headlines, button text, badge labels."
+      },
+      "sm": {
+        "$value": 1.35,
+        "$type": "number",
+        "$description": "Snug line height (1.35 / 135%). Use for: smaller headings (h3-h6), subheadings, short multi-line text, compact interfaces. Tighter than body but readable for short passages. Common in: h3-h6 headings, card titles, navigation items, form labels, compact UI text."
+      },
+      "md": {
+        "$value": 1.5,
+        "$type": "number",
+        "$description": "Normal line height (1.5 / 150%). WCAG MINIMUM for body text. Use for: standard body text, paragraphs, UI descriptions, form inputs, most readable content. Baseline for accessibility compliance. Common in: body paragraphs, descriptions, form values, help text, table cells."
+      },
+      "lg": {
+        "$value": 1.65,
+        "$type": "number",
+        "$description": "Relaxed line height (1.65 / 165%). Use for: longer paragraphs, improved readability, wide content areas, users who need more visual separation. Better for sustained reading. Common in: article content, documentation, expanded descriptions, accessibility-focused interfaces."
+      },
+      "xl": {
+        "$value": 1.8,
+        "$type": "number",
+        "$description": "Loose line height (1.8 / 180%). Use for: long-form prose, documentation, maximum readability, accessibility accommodations. Very generous spacing between lines. Common in: blog posts, help documentation, legal text, content prioritizing readability over density."
+      }
+    }
+  },
+  "opacity": {
+    "0": {
+      "$value": 0,
+      "$type": "number",
+      "$description": "Fully transparent (0%). Use for: hidden elements, animation start states, invisible interactive areas. Element is invisible but may still be interactive. CSS: opacity: 0; visibility: hidden for truly hidden."
+    },
+    "5": {
+      "$value": 0.05,
+      "$type": "number",
+      "$description": "5% opacity - barely visible. Use for: extremely subtle hover states, ghost backgrounds, near-invisible separators. Only visible against high-contrast backgrounds."
+    },
+    "10": {
+      "$value": 0.1,
+      "$type": "number",
+      "$description": "10% opacity - subtle transparency. Use for: light hover backgrounds, subtle shadows, faint overlays. Minimally perceptible change."
+    },
+    "20": {
+      "$value": 0.2,
+      "$type": "number",
+      "$description": "20% opacity - light transparency. Use for: hover states, light overlays, muted backgrounds. Noticeable but unobtrusive."
+    },
+    "25": {
+      "$value": 0.25,
+      "$type": "number",
+      "$description": "25% opacity - quarter visible. Use for: skeleton loading states, light dimming, subtle backgrounds. Common for placeholder content."
+    },
+    "30": {
+      "$value": 0.3,
+      "$type": "number",
+      "$description": "30% opacity - moderate transparency. Use for: image overlays, text shadows, moderate dimming. Visible but allows content behind to show clearly."
+    },
+    "40": {
+      "$value": 0.4,
+      "$type": "number",
+      "$description": "40% opacity - semi-transparent. Use for: medium overlays, watermarks, partially hidden content. Balanced visibility."
+    },
+    "50": {
+      "$value": 0.5,
+      "$type": "number",
+      "$description": "50% opacity - half visible. Use for: disabled elements (semantic alias: 'disabled'), balanced overlays, de-emphasized content. CAUTION: May not meet contrast requirements for text."
+    },
+    "60": {
+      "$value": 0.6,
+      "$type": "number",
+      "$description": "60% opacity - mostly visible. Use for: modal backdrops (semantic alias: 'overlay'), dimmed backgrounds, focus-drawing overlays. Content behind is visible but de-emphasized."
+    },
+    "70": {
+      "$value": 0.7,
+      "$type": "number",
+      "$description": "70% opacity - high visibility. Use for: heavy overlays, strong dimming, de-emphasized backgrounds. Most content visible but clearly secondary."
+    },
+    "75": {
+      "$value": 0.75,
+      "$type": "number",
+      "$description": "75% opacity - three-quarters visible. Use for: dark overlays, strong backgrounds, significant dimming. Mostly solid with hint of transparency."
+    },
+    "80": {
+      "$value": 0.8,
+      "$type": "number",
+      "$description": "80% opacity - mostly solid. Use for: nearly-opaque overlays, frosted glass effects (with backdrop-filter), heavy backgrounds."
+    },
+    "90": {
+      "$value": 0.9,
+      "$type": "number",
+      "$description": "90% opacity - nearly solid. Use for: subtle transparency effects, slight see-through, glass-like surfaces. Almost indistinguishable from solid."
+    },
+    "100": {
+      "$value": 1,
+      "$type": "number",
+      "$description": "Fully opaque (100%). Use for: solid elements, removing inherited transparency, default element state. CSS: opacity: 1; (default browser value)."
+    },
+    "disabled": {
+      "$value": 0.5,
+      "$type": "number",
+      "$description": "Disabled element opacity (50%). SEMANTIC alias for opacity.50. Use for: disabled buttons, inactive controls, unavailable options. Universally recognized as 'inactive'. ACCESSIBILITY: Ensure disabled elements are still perceivable and their disabled state is communicated via aria-disabled."
+    },
+    "overlay": {
+      "$value": 0.6,
+      "$type": "number",
+      "$description": "Modal overlay opacity (60%). SEMANTIC alias for opacity.60. Use for: modal backdrops, lightbox backgrounds, focus-drawing overlays. Dims background while keeping it visible for context. Common in: Modal backdrop, Drawer overlay, image lightbox backgrounds."
+    }
+  }
+}

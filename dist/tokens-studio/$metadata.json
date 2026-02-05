@@ -1,17 +1,6 @@
 {
   "tokenSetOrder": [
-    "core/color",
-    "core/spacing",
-    "core/radius",
-    "core/typography",
-    "core/shadow",
-    "core/motion",
-    "core/border",
-    "core/breakpoints",
-    "core/z-index",
-    "core/opacity",
-    "core/sizing",
-    "core/focus",
+    "core/core",
     "semantic/light",
     "semantic/dark",
     "components/button",
