@@ -201,6 +201,39 @@ function checkUnresolvedReferences(content, filePath) {
     return [];
 }
 
+// Register custom transform for boxShadow (Tokens Studio format) to CSS
+StyleDictionary.registerTransform({
+    name: 'shadow/css',
+    type: 'value',
+    filter: (token) => {
+        return token.$type === 'boxShadow' || token.type === 'boxShadow';
+    },
+    transform: (token) => {
+        const value = token.$value ?? token.value;
+        
+        // If already a string, return as-is
+        if (typeof value === 'string') return value;
+        
+        // If empty array, return 'none'
+        if (Array.isArray(value) && value.length === 0) return 'none';
+        
+        // Convert array of shadow objects to CSS string
+        if (Array.isArray(value)) {
+            return value.map(shadow => {
+                const inset = shadow.type === 'innerShadow' ? 'inset ' : '';
+                const x = shadow.x || '0';
+                const y = shadow.y || '0';
+                const blur = shadow.blur || '0';
+                const spread = shadow.spread || '0';
+                const color = shadow.color || 'rgba(0, 0, 0, 0.1)';
+                return `${inset}${x} ${y} ${blur} ${spread} ${color}`;
+            }).join(', ');
+        }
+        
+        return value;
+    }
+});
+
 // Register custom transform for CCUI CSS variable names
 StyleDictionary.registerTransform({
     name: 'name/ccui',
@@ -286,12 +319,12 @@ StyleDictionary.registerTransform({
 // Register transform groups
 StyleDictionary.registerTransformGroup({
     name: 'ccui/css',
-    transforms: ['attribute/cti', 'name/ccui']
+    transforms: ['attribute/cti', 'name/ccui', 'shadow/css']
 });
 
 StyleDictionary.registerTransformGroup({
     name: 'mantine/css',
-    transforms: ['attribute/cti', 'name/mantine-theme']
+    transforms: ['attribute/cti', 'name/mantine-theme', 'shadow/css']
 });
 
 // ========================================
